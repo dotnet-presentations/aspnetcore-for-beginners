@@ -36,4 +36,4 @@ Deck: ASP.NET Core for Beginners (45 minutes - 1 hour)
 	3. Scaffolded Razor Pages
 	4. Work with SQLite
 	5. Update the pages
-  6. Add search
+  	6. Add search
