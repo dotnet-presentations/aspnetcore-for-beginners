@@ -38,7 +38,7 @@ public async Task OnGetAsync(string searchString)
 - Run your application 
 - Append the query string to the end `?searchString=Wrinkle`
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/searchString.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/images/searchString.PNG)
 
 ### Add a Search Box
 **Search by Title** 
@@ -58,6 +58,6 @@ Open the Index.cshtml file and add the`<form>`
 ```
 - run the application 
 - Enter a film title 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/form.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/images/form.PNG)
 
 **Search by genre**
