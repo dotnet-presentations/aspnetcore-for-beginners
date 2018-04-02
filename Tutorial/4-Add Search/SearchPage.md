@@ -37,3 +37,27 @@ public async Task OnGetAsync(string searchString)
 **Test search string**
 - Run your application 
 - Append the query string to the end `?searchString=Wrinkle`
+
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/searchString.PNG)
+
+### Add a Search Box
+**Search by Title** 
+Open the Index.cshtml file and add the`<form>`
+```
+<h2>Index</h2>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<form>
+    <p>
+        Movie Title:<input type="text" name="SearchString">
+         <input type="submit" value="Filter"/>
+    </p>
+</form>
+```
+- run the application 
+- Enter a film title 
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/form.PNG)
+
+**Search by genre**
