@@ -8,7 +8,7 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 
 ## Update generated Pages
 
-![](images\CurrentPage.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/CurrentPage.PNG)
 
 In this quick tutorial we are going to learn how to update the generated pages. For example suppose we want to remove the time from the release date.
 
