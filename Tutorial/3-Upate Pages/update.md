@@ -34,4 +34,4 @@ namespace RazorPagesMovie.Models
 }
 ```
 - run the app to see the update `dotnet run`
-![](images\NewPage.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/NewPage.PNG)
