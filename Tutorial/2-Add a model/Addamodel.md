@@ -9,7 +9,8 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 In this section, we are adding classes to manage movies in a database.
 - Add a folder named Models
 - Add a class to Models folder named Movie.cs
-![](images\Models.PNG)
+
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/Models.PNG)
 
 #### Add the code below to Movie.cs
 ```
@@ -104,7 +105,8 @@ dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
 Commands Explained 
-| Command       |    Description       | 
+
+| Command       |Description       | 
 | ------------- |:-------------:|
 | ` add package`    | installs the tools needed |
 | `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'MovieContenxt.cs'.`InitialCreate` is the name of the migrations. |  
@@ -125,13 +127,13 @@ Run the commands below
 - Run the app `dotnet run`
 - Launch a browser and go to `http://localhost:5000/movies`
 
-![](images\moviespage.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/moviespage.PNG)
 - create a new entry
 
-![](images\createnew.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/createnew.PNG)
 
 - It works!
-![](images\newentry.PNG.PNG)
+![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/newentry.PNG.PNG)
 - Test to se Edit, Details and delete
 
 To learn more on the pages created in this tutorial read [this post](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/page)
