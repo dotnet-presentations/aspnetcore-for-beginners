@@ -2,7 +2,7 @@
 This is a half day workshop for developers who are completely new to .NET Core and ASP.NET ASP.NET.
 
 ## Setup
-****
+
 Install the Following 
 * [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
@@ -11,7 +11,7 @@ Install the Following
 In this tutorial you will learn the basics of building a simple ASP.NET Core Razor Pages wab app.
 
 ## Tutorial Breakdown 
-***
+
 
 | Tutorial| Topics |
 | ----- | ---- |
