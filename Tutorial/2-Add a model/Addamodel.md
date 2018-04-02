@@ -1,10 +1,9 @@
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* .NET Core SDK 2.1 
-*  Visual Studio Code
-* Tutorial 1- Create a Razor Page application
-
+* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
+*  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* Tutorial 1- [Create a Razor Page application](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 ## Add a data model
 In this section, we are adding classes to manage movies in a database.
 - Add a folder named Models
