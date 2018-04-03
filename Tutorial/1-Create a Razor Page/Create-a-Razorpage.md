@@ -34,4 +34,4 @@ Open a browser and go http://localhost:5000/ to view the application.
 | Startup.cs | Configures services  we use in our application. For example adding user authentication through Microsoft, Google or Facebook account.   |
 | Program.cs | Host our ASP.NET Core application.*The host is responsible for app startup and lifetime management*     |  
 
-What's Next - Add a Model
+**NEXT TUTORIAL** - [Adding a Model](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/Addamodel.md)
