@@ -1,3 +1,4 @@
+
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
@@ -36,3 +37,5 @@ namespace RazorPagesMovie.Models
 ```
 - run the app to see the update `dotnet run`
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/NewPage.PNG)
+
+**NEXT TUTORIAL** :[Adding search](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/SearchPage.md)
