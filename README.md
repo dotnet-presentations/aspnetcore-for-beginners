@@ -4,7 +4,7 @@ This is a half day workshop for developers who are completely new to .NET Core a
 ## Setup
 
 Install the Following 
-* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
+* [.NET Core SDK](https://www.microsoft.com/net/download/) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 
 ### What you'll be building
