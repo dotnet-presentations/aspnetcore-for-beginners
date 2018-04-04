@@ -136,5 +136,6 @@ Run the commands below
 - Test to se Edit, Details and delete
 
 To learn more on the pages created in this tutorial read [this post](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/page)
+**Extra light read 7 minutes**: If you want to read more on pages we just created [click here for more information](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/page).
 
 **NEXT TUTORIAL** :[Modifying generated pages](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/update.md)
