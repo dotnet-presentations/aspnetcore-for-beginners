@@ -11,7 +11,6 @@ using RazorPagesMovie.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace RazorPagesMovie
 {
     public class Startup
