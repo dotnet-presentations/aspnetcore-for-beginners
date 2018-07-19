@@ -74,26 +74,6 @@ Open Startup.cs file and add the code below to the ConfigureServices method.
 ```
 Add the following using statements `using RazorPagesMovie.Models` and `using Microsoft.EntityFrameworkCore`.
 
-#### Add the Entity Framework tools 
-
-- Install the   `Microsoft.EntityFrameworkCore.Tools.DotNet` package to `DotNetCliToolReference` in RazorPagesMovie.csproj.
-
-```
-<Project Sdk="Microsoft.NET.Sdk.Web">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
-  </ItemGroup>
-  <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
-    <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.1" />
-  </ItemGroup>
-</Project>
-
-```
 #### Add scaffold tooling and perform initial migration
 
 In the command line run the following commands
@@ -103,13 +83,13 @@ dotnet restore
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
-Commands Explained 
+Commands Explained
 
-| Command       |Description       | 
+| Command       |Description       |
 | ------------- |:-------------:|
 | ` add package`    | installs the tools needed |
-| `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'MovieContenxt.cs'.`InitialCreate` is the name of the migrations. |  
-|`ef database update` | creates the database      | 
+| `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'MovieContext.cs'. `InitialCreate` is the name of the migrations. |  
+|`ef database update` | creates the database      |
 
 #### Scaffold the movie model
 

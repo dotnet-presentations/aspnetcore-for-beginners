@@ -121,7 +121,7 @@ public async Task OnGetAsync(string movieGenre,string searchString)
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/images/genre.PNG)
 
-Mission Accomplished 
+Mission Accomplished
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
