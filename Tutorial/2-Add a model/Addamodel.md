@@ -106,16 +106,18 @@ Run the commands below
 `dotnet aspnet-codegenerator razorpage -m Movie -dc MovieContext -udl -outDir Pages/Movies --referenceScriptLibraries`
 #### Test your app
 1. Run the app `dotnet run`
-- Launch a browser and go to `http://localhost:5000/movies`
+1. Launch a browser and go to `http://localhost:5000/movies`
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/moviespage.PNG)
-- Create a new entry
+1. Create a new entry
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/createnew.PNG)
 
 - It works!
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/newentry.PNG.PNG)
 
+- Test Edit, Details and Delete links
+- 
 **Extra light read 7 minutes**: If you want to read more on pages we just created [click here for more information](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/page).
 
 **NEXT TUTORIAL** :[Modifying generated pages](../3-Update%20Pages/update.md)

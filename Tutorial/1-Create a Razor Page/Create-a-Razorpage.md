@@ -4,9 +4,9 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 * [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 
-### Create a Razor web app
+## Create a Razor web app
 
-Enter commands below in the terminal 
+Enter commands below in the terminal
 ```
 dotnet new razor -o RazorPagesMovie
 cd RazorPagesMovie
