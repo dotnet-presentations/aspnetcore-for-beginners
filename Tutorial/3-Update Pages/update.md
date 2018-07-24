@@ -10,7 +10,7 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 
 ## Update generated Pages
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/CurrentPage.PNG)
+![](images/CurrentPage.PNG)
 
 In this quick tutorial we are going to learn how to update the generated pages. For example suppose we want to remove the time from the release date.
 
@@ -36,6 +36,6 @@ namespace RazorPagesMovie.Models
 }
 ```
 - run the app to see the update `dotnet run`
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/NewPage.PNG)
+![](images/NewPage.PNG)
 
 **NEXT TUTORIAL** :[Adding search](../4-Add%20Search/SearchPage.md)

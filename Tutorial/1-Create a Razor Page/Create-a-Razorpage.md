@@ -14,7 +14,7 @@ dotnet run
 ```
 Open a browser and go http://localhost:5000/ to view the application.
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/1-Create%20a%20Razor%20Page/images/razor-page.png)
+![](images/razor-page.png)
 
 #### Open project in VS Code
 
@@ -24,7 +24,7 @@ Open a browser and go http://localhost:5000/ to view the application.
     - or enter the following command in the terminal `code .`
 - Click Yes to the Warn message *"Required assets to build and debug are missing from 'RazorPagesMovie'. Add them?"*
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/1-Create%20a%20Razor%20Page/images/Openinginvscode.PNG)
+![](images/Openinginvscode.PNG)
 
 #### Project Files and Folders explained
 | Files or Folders       | Purpose        |

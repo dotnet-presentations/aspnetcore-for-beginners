@@ -11,7 +11,7 @@ In this section, we are adding classes to manage movies in a database.
 - Add a folder named Models
 - Add a class to Models folder named Movie.cs
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/Models.PNG)
+![](images/Models.PNG)
 
 #### Add the code below to Movie.cs
 ```
@@ -88,7 +88,7 @@ dotnet ef database update
 Commands Explained
 
 | Command       |Description       |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | ` add package`    | installs the tools needed |
 | `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'MovieContext.cs'. `InitialCreate` is the name of the migrations. |  
 |`ef database update` | creates the database      |
@@ -108,13 +108,13 @@ Run the commands below
 1. Run the app `dotnet run`
 1. Launch a browser and go to `http://localhost:5000/movies`
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/moviespage.PNG)
+![](images/moviespage.PNG)
 1. Create a new entry
 
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/createnew.PNG)
+![](images/createnew.PNG)
 
 - It works!
-![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/newentry.PNG.PNG)
+![](images/newentry.PNG)
 
 - Test Edit, Details and Delete links
 - 
