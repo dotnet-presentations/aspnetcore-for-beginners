@@ -1,9 +1,11 @@
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
+* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/)
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
-* Tutorial 1- [Create a Razor Page application](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
+* Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
+
+  
 ## Add a data model
 In this section, we are adding classes to manage movies in a database.
 - Add a folder named Models
@@ -47,7 +49,7 @@ namespace RazorPagesMovie.Models
 ```
 The code above creates a `DbSet`  property for the entity set. An entity set typically corresponds to a database table, and entity corresponds to a row in the table.
 
-#### Add a connection string.
+#### Add a connection string
 
 Open the `appsettings.json` file.
 ```
@@ -93,7 +95,7 @@ Commands Explained
 
 #### Scaffold the movie model
 
-Run the commands below 
+Run the commands below
 
 *On Windows*
 
@@ -103,19 +105,17 @@ Run the commands below
 
 `dotnet aspnet-codegenerator razorpage -m Movie -dc MovieContext -udl -outDir Pages/Movies --referenceScriptLibraries`
 #### Test your app
-- Run the app `dotnet run`
+1. Run the app `dotnet run`
 - Launch a browser and go to `http://localhost:5000/movies`
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/moviespage.PNG)
-- create a new entry
+- Create a new entry
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/createnew.PNG)
 
 - It works!
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/images/newentry.PNG.PNG)
-- Test to se Edit, Details and delete
-
 
 **Extra light read 7 minutes**: If you want to read more on pages we just created [click here for more information](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/page).
 
-**NEXT TUTORIAL** :[Modifying generated pages](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/update.md)
+**NEXT TUTORIAL** :[Modifying generated pages](../3-Update%20Pages/update.md)

@@ -4,8 +4,8 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 ### Prerequisites
 * [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
-* Tutorial 1- [Create a Razor Page application](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
-* Tutorial 2- [Add a Model](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/Addamodel.md)
+* Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
+* Tutorial 3- [Update Page](../3-Update%20Pages/update.md)
 
 
 ## Update generated Pages
@@ -38,4 +38,4 @@ namespace RazorPagesMovie.Models
 - run the app to see the update `dotnet run`
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/3-Upate%20Pages/images/NewPage.PNG)
 
-**NEXT TUTORIAL** :[Adding search](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/SearchPage.md)
+**NEXT TUTORIAL** :[Adding search](../4-Add%20Search/SearchPage.md)

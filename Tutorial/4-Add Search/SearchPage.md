@@ -1,13 +1,13 @@
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
+* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/)
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
-* Tutorial 1- [Create a Razor Page application](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
-* Tutorial 2- [Add a Model](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/2-Add%20a%20model/Addamodel.md)
-* Tutorial 3 - [Update Page](https://github.com/dotnet-presentations/aspnetcore-for-beginners/tree/master/Tutorial/3-Upate%20Pages)
+* Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
+* Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
+* Tutorial 3- [Update Page](../3-Update%20Pages/update.md)
 
-## Adding Search to a page 
+## Adding Search to a page
 
 In this quick tutorial we are going to search to the Index Page. By the end of this tutorial you can search by genre and name.
 
@@ -56,12 +56,12 @@ Open the Index.cshtml file and add the`<form>`
     </p>
 </form>
 ```
-- run the application `http://localhost:5000/movies` 
-- Enter a film title 
+- Run the application `http://localhost:5000/movies` 
+- Enter a film title
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/images/form.PNG)
 
-**Search by genre**
+**Search by Genre**
 - Add the code below to Pages/Movies/Index.cshtml.cs
 
 *Note you will need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
@@ -117,7 +117,7 @@ public async Task OnGetAsync(string movieGenre,string searchString)
     </p>
 </form>
 ```
-- run the application `http://localhost:5000/movies`
+- Run the application `http://localhost:5000/movies`
 
 ![](https://github.com/dotnet-presentations/aspnetcore-for-beginners/blob/master/Tutorial/4-Add%20Search/images/genre.PNG)
 
