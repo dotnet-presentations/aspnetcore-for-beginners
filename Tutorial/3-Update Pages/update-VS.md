@@ -18,7 +18,7 @@ In this quick tutorial we are going to learn how to update the generated pages. 
 
 ### Replace Movie.cs with the following
 
-```
+```csharp
 using System;
 namespace RazorPagesMovie.Models
 {
@@ -38,9 +38,15 @@ namespace RazorPagesMovie.Models
 }
 ```
 
-* Right click on a red squiggly line > Quick Actions and Refactoring
-* Select using `System.ComponentModel.DataAnnotations;`
-* Right click on a red squiggly line > Quick Actions and Refactorings on the [Column] atribute and select using `System.ComponentModel.DataAnnotations.Schema;`
+* Right click on a red line > Quick Actions and Refactoring
+
+![](images/refactor_VS.png)
+
+* Select `using System.ComponentModel.DataAnnotations;`
+
+![](images/using_annotations_VS.png)
+
+* Right click on the remaining red line > Quick Actions and Refactorings on the [Column] attribute and select using `System.ComponentModel.DataAnnotations.Schema;`
 * Press F5 to run the app and see the changes.
 
 ![](images/NewPage.PNG)

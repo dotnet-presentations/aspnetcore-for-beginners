@@ -10,14 +10,27 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 
 * From the Visual Studio File menu, select New > Project.
 * Create a new ASP.NET Core Web Application. Name the project RazorPagesMovie.
+
+![](images/newproject.png)
+
 * Select ASP.NET Core 2.1 in the dropdown, and then select Web Application.
-* Press F5 to run the app
-  
+
+![](images/createwebapp.png)
+
+The Visual Studio template creates a starter project.
+
+![](images/projectfiles-vs.png)
+
+* Press F5 to run the app to view the project with the default template.
+
 ![](images/razor-page.png)
 
 #### Project Files and Folders explained
+
+The following table lists the files and folders associated in the project.
+
 | Files or Folders       | Purpose        |
-| ------------- |:-------------:|
+| ------------- |-------------|
 | wwwroot      | Contains all the static files. For example CSS, images etc. | 
 | Pages     | This folder contains the pages for our application.      |    
 | Startup.cs | Configures services  we use in our application. For example adding user authentication through Microsoft, Google or Facebook account.   |

@@ -14,7 +14,8 @@ In this section, we are adding classes to manage movies in a database.
 * Right click the Models folder. Select Add > Class. Name the class `Movie`.
 
 #### Add the code below to Movie.cs
-```
+
+```csharp
 using System;
 
 namespace RazorPagesMovie.Models
@@ -36,9 +37,16 @@ namespace RazorPagesMovie.Models
 * In Solution Explorer, right click on the Pages folder > Add > New Folder.
 * Name the folder Movies
 * In Solution Explorer, right click on the Pages/Movies folder > Add > New Scaffolded Item.
-* In the Add Scaffold dialog, select Razor Pages using Entity Framework (CRUD) > ADD.
+  
+![](images/add_scaffold_VS.png)
+
+* In the Add Scaffold dialog, select Razor Pages using Entity Framework (CRUD) > Add.
+  
+![](images/scaffold_dialog_VS.png)
 
 ### In the Add Razor Pages using Entity Framework (CRUD) dialog:
+
+![](images/add_razor_VS.png)
 
 * In the Model class drop down, select Movie (RazorPagesMovie.Models).
 * In the Data context class row, select the + (plus) sign and set the name as RazorPagesMovie.Models.MovieContext.
@@ -60,14 +68,16 @@ The scaffold process also modifies existing files:
 * Startup.cs: Created a DB context and registered it with the dependency injection container
 * appsettings.json: The connection string used to connect to a local database is added.
 
-
 #### Perform initial migration
 
 * From the Tools menu, select NuGet Package Manager > Package Manager Console.
+
+![](images/pmc_VS.png)
+
 * In the Package Manager Console enter the following commands:
 
 ```
-Add*Migration Initial
+Add-Migration Initial
 Update-Database
 ```
 
@@ -82,6 +92,7 @@ Update-Database
 ![](images/createnew.PNG)
 
 * It works!
+
 ![](images/newentry.PNG)
 
 * Test the Edit, Details and Delete links

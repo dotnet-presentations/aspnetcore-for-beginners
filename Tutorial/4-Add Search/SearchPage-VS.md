@@ -31,8 +31,8 @@ public async Task OnGetAsync(string searchString)
 
 ### Test search string
 
-- Run your application again with F5 and navigate back to the Movies Page
-- Append the query string to the end `?searchString=Wrinkle` (for example `http://localhost:5000/Movies?searchString=Wrinkle`)
+* Run your application again with F5 and navigate back to the Movies Page
+* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:5000/Movies?searchString=Wrinkle`)
 
 ![](images/searchString.PNG)
 
@@ -123,7 +123,7 @@ public async Task OnGetAsync(string movieGenre,string searchString)
 </form>
 ```
 
-- Run the application `http://localhost:5000/movies`
+* Run the application with F5
 
 ![](images/genre.PNG)
 
