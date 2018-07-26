@@ -38,7 +38,7 @@ namespace RazorPagesMovie.Models
 }
 ```
 
-* Right click on a red line > Quick Actions and Refactoring
+* Right click on a red line > Quick Actions and Refactorings
 
 ![](images/refactor_VS.png)
 
