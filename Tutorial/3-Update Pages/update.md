@@ -12,9 +12,12 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 
 ![](images/CurrentPage.PNG)
 
-In this quick tutorial we are going to learn how to update the generated pages. For example suppose we want to remove the time from the release date.
+In this quick tutorial we are going to learn how to update the generated pages. For example, suppose we want to remove the time from the release date.
 
-- Open Models/Movie.cs `using System.ComponentModel.DataAnnotations;` and following [data annotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6) `[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]`.
+* Open Models/Movie.cs
+* Add this using statement: `using System.ComponentModel.DataAnnotations;` 
+* Add the [following data annotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6): 
+`[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` as shown below:
 
 ```
 using System;

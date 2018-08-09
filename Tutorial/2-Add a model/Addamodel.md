@@ -30,7 +30,7 @@ namespace RazorPagesMovie.Models
 }
 ```
 #### Add a database context class
-Create a new class named `MovieContext.cs` in the Models folder. database context aka `DbContext` is a class provided by Entity Framework to establish connection to database.
+Create a new class named `MovieContext.cs` in the Models folder. The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
 ```
 using Microsoft.EntityFrameworkCore;
 
@@ -47,11 +47,11 @@ namespace RazorPagesMovie.Models
     }
 }
 ```
-The code above creates a `DbSet`  property for the entity set. An entity set typically corresponds to a database table, and entity corresponds to a row in the table.
+The code above creates a `DbSet`  property for the entity set. An entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
 
 #### Add a connection string
 
-Open the `appsettings.json` file.
+Open the `appsettings.json` file and add the `MovieContext` connection string as shown below.
 ```
 {
   "Logging": {
@@ -68,19 +68,27 @@ Open the `appsettings.json` file.
 #### Register the database context
 Open Startup.cs file and add the code below to the ConfigureServices method.
 ```
- public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<MovieContext>(options => options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
-            services.AddMvc();
-        }
+public void ConfigureServices(IServiceCollection services)
+{
+    services.Configure<CookiePolicyOptions>(options =>
+    {
+        // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+        options.CheckConsentNeeded = context => true;
+        options.MinimumSameSitePolicy = SameSiteMode.None;
+    });
+
+    services.AddDbContext<MovieContext>(options => options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+}
 ```
-Add the following using statements `using RazorPagesMovie.Models` and `using Microsoft.EntityFrameworkCore`.
+Add the following using statements: `using RazorPagesMovie.Models` and `using Microsoft.EntityFrameworkCore`.
 
 #### Add scaffold tooling and perform initial migration
 
 In the command line run the following commands
 ```
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet restore
 dotnet ef migrations add InitialCreate
 dotnet ef database update
@@ -94,6 +102,14 @@ Commands Explained
 |`ef database update` | creates the database      |
 
 #### Scaffold the movie model
+
+Install the `aspnet-codegenerator` global tool by running the following command:
+
+```
+dotnet tool install --global dotnet-aspnet-codegenerator --version 2.1.1
+```
+
+> Note: You will need to close and reopen the console window to be able to use this tool.
 
 Run the commands below
 
