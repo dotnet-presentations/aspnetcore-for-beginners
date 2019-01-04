@@ -1,7 +1,7 @@
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/)
+* [.NET Core SDK 2.2](https://www.microsoft.com/net/download/)
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
@@ -14,13 +14,13 @@ In this quick tutorial we are going to search to the Index Page. By the end of t
 ### Update the Index page's `OnGetAsync` method
 
 #### Add code below to Movies/Index.cshtml
-```
+``` 
 @{
     Layout = "_Layout";
 }
 ```
 #### Edit the Movies/Index.cshtml.cs
-```
+``` cs
 public async Task OnGetAsync(string searchString)
 {
     var movies = from m in _context.Movie
@@ -66,7 +66,7 @@ public async Task OnGetAsync(string searchString)
 ### Add the code below to Pages/Movies/Index.cshtml.cs
 
 *Note you will need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
-```
+``` cs
 public class IndexModel : PageModel
 {
     private readonly RazorPagesMovie.Models.MovieContext _context;
@@ -82,7 +82,7 @@ public class IndexModel : PageModel
 ```
 
 ### Update `OnGetAsync` method
-```
+``` cs
 public async Task OnGetAsync(string movieGenre,string searchString)
         {
             IQueryable<string> genreQuery = from m in _context.Movie
