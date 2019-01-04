@@ -7,7 +7,7 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 ## Create a Razor web app
 
 Enter commands below in the terminal
-```
+ ```console
 dotnet new razor -o RazorPagesMovie
 cd RazorPagesMovie
 dotnet run

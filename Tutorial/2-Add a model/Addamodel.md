@@ -86,7 +86,7 @@ Add the following using statements: `using RazorPagesMovie.Models` and `using Mi
 #### Add scaffold tooling and perform initial migration
 
 In the command line run the following commands
-```
+ ```console
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet restore
@@ -105,7 +105,7 @@ Commands Explained
 
 Install the `aspnet-codegenerator` global tool by running the following command:
 
-```
+ ```console
 dotnet tool install --global dotnet-aspnet-codegenerator --version 2.1.1
 ```
 
