@@ -19,7 +19,7 @@ In this quick tutorial we are going to learn how to update the generated pages. 
 * Add the [following data annotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6): 
 `[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` as shown below:
 
-```
+``` cs
 using System;
 using System.ComponentModel.DataAnnotations;
 

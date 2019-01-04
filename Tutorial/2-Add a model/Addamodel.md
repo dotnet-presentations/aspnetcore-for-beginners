@@ -14,7 +14,7 @@ In this section, we are adding classes to manage movies in a database.
 ![](images/Models.PNG)
 
 #### Add the code below to Movie.cs
-```
+``` cs
 using System;
 
 namespace RazorPagesMovie.Models
@@ -31,7 +31,7 @@ namespace RazorPagesMovie.Models
 ```
 #### Add a database context class
 Create a new class named `MovieContext.cs` in the Models folder. The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
-```
+``` cs
 using Microsoft.EntityFrameworkCore;
 
 namespace RazorPagesMovie.Models
@@ -52,7 +52,7 @@ The code above creates a `DbSet`  property for the entity set. An entity set typ
 #### Add a connection string
 
 Open the `appsettings.json` file and add the `MovieContext` connection string as shown below.
-```
+``` json
 {
   "Logging": {
     "IncludeScopes": false,
@@ -67,7 +67,7 @@ Open the `appsettings.json` file and add the `MovieContext` connection string as
 ```
 #### Register the database context
 Open Startup.cs file and add the code below to the ConfigureServices method.
-```
+``` cs
 public void ConfigureServices(IServiceCollection services)
 {
     services.Configure<CookiePolicyOptions>(options =>
