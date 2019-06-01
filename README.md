@@ -11,7 +11,7 @@ Install the Following:
 
 ### Visual Studio
 
-*  [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+*  [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio Installer, install the following workloads:
     * ASP.NET and web development
     * .NET Core cross-platform development
