@@ -106,7 +106,7 @@ Commands Explained
 Install the `aspnet-codegenerator` global tool by running the following command:
 
  ```console
-dotnet tool install --global dotnet-aspnet-codegenerator --version 2.1.1
+dotnet tool install --global dotnet-aspnet-codegenerator
 ```
 
 > Note: You will need to close and reopen the console window to be able to use this tool.
