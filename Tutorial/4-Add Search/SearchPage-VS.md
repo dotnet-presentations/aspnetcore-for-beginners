@@ -12,9 +12,9 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 
 In this quick tutorial we are going to search to the Index Page. By the end of this tutorial you can search by genre and name.
 
-#### Replace Movies/Index.cshtml.cs with the following
+#### Open Pages/Movies/Index.cshtml.cs and replace OnGetAsync with the following:
 
-```
+```csharp
 public async Task OnGetAsync(string searchString)
 {
     var movies = from m in _context.Movie
@@ -32,7 +32,7 @@ public async Task OnGetAsync(string searchString)
 ### Test search string
 
 * Run your application again with F5 and navigate back to the Movies Page
-* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:5000/Movies?searchString=Wrinkle`)
+* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:5000/Movies?searchString=avengers`)
 
 ![](images/searchString.PNG)
 
@@ -42,7 +42,7 @@ public async Task OnGetAsync(string searchString)
 
 #### Open the Pages/Movies/Index.cshtml file and add the`<form>`
 
-```
+```csharp
 <h2>Index</h2>
 
 <p>
@@ -56,10 +56,10 @@ public async Task OnGetAsync(string searchString)
 </form>
 ```
 
-* Run the application `http://localhost:5000/movies`
+* Run the application with F5
 * Enter a film title
 
-![](images/form.PNG)
+![](images/searchform.PNG)
 
 **Search by Genre**
 
