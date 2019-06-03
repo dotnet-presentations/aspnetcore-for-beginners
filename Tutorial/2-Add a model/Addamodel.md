@@ -78,7 +78,7 @@ public void ConfigureServices(IServiceCollection services)
     });
 
     services.AddDbContext<MovieContext>(options => options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 }
 ```
 Add the following using statements: `using RazorPagesMovie.Models` and `using Microsoft.EntityFrameworkCore`.

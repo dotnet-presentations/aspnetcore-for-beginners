@@ -1,7 +1,7 @@
 The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-*  [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+*  [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio Installer, install the following workloads:
     * ASP.NET and web development
     * .NET Core cross-platform development
@@ -101,4 +101,4 @@ If you get a SQL exception, verify you have run migrations and updated the datab
 
 **Extra light read 7 minutes**: If you want to read more on pages we just created [click here for more information](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/page).
 
-**NEXT TUTORIAL** :[Modifying generated pages](../3-Update%20Pages/update-VS.md)
+**NEXT TUTORIAL** - [Modifying generated pages](../3-Update%20Pages/update-VS.md)
