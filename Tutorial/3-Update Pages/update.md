@@ -2,7 +2,7 @@
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 2.1](https://www.microsoft.com/net/download/) 
+* [.NET Core SDK 2.2](https://www.microsoft.com/net/download/) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
 * Tutorial 3- [Update Page](../3-Update%20Pages/update.md)
@@ -12,11 +12,14 @@ The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in V
 
 ![](images/CurrentPage.PNG)
 
-In this quick tutorial we are going to learn how to update the generated pages. For example suppose we want to remove the time from the release date.
+In this quick tutorial we are going to learn how to update the generated pages. For example, suppose we want to remove the time from the release date.
 
-- Open Models/Movie.cs `using System.ComponentModel.DataAnnotations;` and following [data annotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6) `[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]`.
+* Open Models/Movie.cs
+* Add this using statement: `using System.ComponentModel.DataAnnotations;` 
+* Add the [following data annotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6): 
+`[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` as shown below:
 
-```
+``` cs
 using System;
 using System.ComponentModel.DataAnnotations;
 
