@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Tutorial/1-Create a Razor Page/RazorPagesMovie/bin/Debug/netcoreapp2.0/RazorPagesMovie.dll",
+            "program": "${workspaceFolder}/Tutorial/1-Create a Razor Page/RazorPagesMovie/bin/Debug/netcoreapp2.2/RazorPagesMovie.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Tutorial/1-Create a Razor Page/RazorPagesMovie",
             "stopAtEntry": false,
