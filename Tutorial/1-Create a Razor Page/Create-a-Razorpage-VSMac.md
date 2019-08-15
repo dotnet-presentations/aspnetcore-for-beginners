@@ -2,12 +2,12 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 
 ### Prerequisites
 *  [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
-* In the Visual Studio Installer, install the following targets:
+* In the Visual Studio for Mac Installer, install the following targets:
     * .NET Core
 
 ## Create a Razor web app
 
-* From the Visual Studio File menu, select New Solution.
+* From the Visual Studio for Mac File menu, select New Solution.
 * Create a new ASP.NET Core Web Application with .NET Core > App > Web Application. Name the project RazorPagesMovie.
 
 ![](images/newproject-vsmac.png)
