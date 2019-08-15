@@ -18,7 +18,8 @@ Install the Following:
 
 ### Visual Studio for Mac
 
-*  [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [Install .NET Core SDK 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
 * In the Visual Studio for Mac Installer, install the .NET Core target.
 
 ### What you'll be building
