@@ -16,6 +16,11 @@ Install the Following:
     * ASP.NET and web development
     * .NET Core cross-platform development
 
+### Visual Studio for Mac
+
+*  [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* In the Visual Studio for Mac Installer, install the .NET Core target.
+
 ### What you'll be building
 In this tutorial you will learn the basics of building a simple ASP.NET Core Razor Pages wab app.
 
