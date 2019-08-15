@@ -5,6 +5,7 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 * In the Visual Studio Installer, install the following workloads:
     * ASP.NET and web development
     * .NET Core cross-platform development
+* Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage-VS.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel-VS.md)
 * Tutorial 3- [Update Page](../3-Update%20Pages/update-VS.md)
 
