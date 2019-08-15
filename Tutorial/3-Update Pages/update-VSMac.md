@@ -50,4 +50,4 @@ namespace RazorPagesMovie.Models
 
 ![](images/NewPage.PNG)
 
-**NEXT TUTORIAL** - [Adding search](../4-Add%20Search/SearchPage-VS.md)
+**NEXT TUTORIAL** - [Adding search](../4-Add%20Search/SearchPage-VSMac.md)

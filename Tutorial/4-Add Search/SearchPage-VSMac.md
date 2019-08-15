@@ -4,8 +4,8 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 *  [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio Installer, install the following workloads:
     * .NET Core
-* Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel-VS.md)
-* Tutorial 3- [Update Page](../3-Update%20Pages/update-VS.md)
+* Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel-VSMac.md)
+* Tutorial 3- [Update Page](../3-Update%20Pages/update-VSMac.md)
 
 ## Adding Search to a page
 

@@ -39,4 +39,4 @@ The following table lists the files and folders associated in the project.
 | Startup.cs | Configures services  we use in our application. For example adding user authentication through Microsoft, Google or Facebook account.   |
 | Program.cs | Host our ASP.NET Core application.*The host is responsible for app startup and lifetime management*     |  
 
-**NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel-VS.md)
+**NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel-VSMac.md)
