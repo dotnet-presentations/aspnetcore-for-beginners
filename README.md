@@ -23,7 +23,7 @@ Install the Following:
 * In the Visual Studio for Mac Installer, install the .NET Core target.
 
 ### What you'll be building
-In this tutorial you will learn the basics of building a simple ASP.NET Core Razor Pages wab app.
+In this tutorial you will learn the basics of building a simple ASP.NET Core Razor Pages web app.
 
 ## Tutorial Breakdown
 
