@@ -1,7 +1,7 @@
 The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 2.2](https://www.microsoft.com/net/download/) 
+* [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 
 ## Create a Razor web app

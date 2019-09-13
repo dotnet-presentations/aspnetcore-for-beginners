@@ -3,7 +3,7 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 ### Prerequisites
 * [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio for Mac Installer, install the .NET Core target.
-* [Install .NET Core SDK 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2)
+* [Install .NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage-VSMac.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel-VSMac.md)
 * Tutorial 3- [Update Page](../3-Update%20Pages/update-VSMac.md)
