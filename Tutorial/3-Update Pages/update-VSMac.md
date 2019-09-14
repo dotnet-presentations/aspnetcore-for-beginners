@@ -36,7 +36,7 @@ namespace RazorPagesMovie.Models
 }
 ```
 
-* Right click on a red line > Quick Actions and Refactorings
+* Right click on a red line > Quick Fix...
 
 ![](images/refactor_VSMac.png)
 
@@ -44,7 +44,7 @@ namespace RazorPagesMovie.Models
 
 ![](images/using_annotations_VSMac.png)
 
-* Right click on the remaining red line > Quick Actions and Refactorings on the [Column] attribute and select using `System.ComponentModel.DataAnnotations.Schema;`
+* Right click on the remaining red line > Quick Fix... on the [Column] attribute and select using `System.ComponentModel.DataAnnotations.Schema;`
 * Run the application with Run > Start without Debugging and see the changes.
 
 ![](images/NewPage.PNG)
