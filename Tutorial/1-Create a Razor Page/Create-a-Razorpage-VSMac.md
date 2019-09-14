@@ -11,7 +11,7 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 
 ![](images/newproject-vsmac.png)
 
-* Select ASP.NET Core 2.2 in the dropdown, and then select Web Application.    
+* Select ASP.NET Core 3.0 in the dropdown, and then select Web Application.
 
 ![](images/createwebapp-vsmac.png)
 
