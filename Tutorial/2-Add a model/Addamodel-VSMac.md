@@ -102,6 +102,15 @@ Repeat this to add the `Microsoft.EntityFrameworkCore.Sqlite` package.
 
 #### Perform initial migration
 
+To run commands to create and manage migrations, you need to install the `dotnet ef` tool. Do that with the
+following command in the terminal.
+
+```console
+dotnet tool install --global dotnet-ef --version 3.0.0-*
+```
+
+For more info see https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet.
+
 In the terminal run the following commands in the project directory
  ```console
 dotnet ef migrations add InitialCreate
