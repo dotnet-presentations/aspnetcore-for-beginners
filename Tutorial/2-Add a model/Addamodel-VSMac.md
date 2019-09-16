@@ -35,19 +35,28 @@ namespace RazorPagesMovie.Models
 
 #### Add a database context class
 Create a new class named `MovieContext.cs` in the Models folder. The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
+
 ``` cs
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
-namespace RazorPagesMovie.Models
-{
-    public class MovieContext : DbContext
-    {
+namespace RazorPagesMovie.Models {
+    public class MovieContext : DbContext {
         public MovieContext(DbContextOptions<MovieContext> options)
-                : base(options)
-        {
+                : base(options) {
         }
 
         public DbSet<Movie> Movie { get; set; }
+    }
+
+
+    public class MovieContextFactory : IDesignTimeDbContextFactory<MovieContext> {
+        public MovieContext CreateDbContext(string[] args) {
+            var optionsBuilder = new DbContextOptionsBuilder<MovieContext>();
+            optionsBuilder.UseSqlite("Data Source=MvcMovie.db");
+
+            return new MovieContext(optionsBuilder.Options);
+        }
     }
 }
 ```
@@ -93,12 +102,13 @@ You will add two NuGet packages to the project.
 
  - `Microsoft.VisualStudio.Web.CodeGeneration.Design`
  - `Microsoft.EntityFrameworkCore.Sqlite`
+ - `Microsoft.EntityFrameworkCore.Design`
 
 Add the `Microsoft.VisualStudio.Web.CodeGeneration.Design` to the project. Right click on Dependencies and select Add Packages in Solution Pad for the project. In the Add Packages dialog, search for Microsoft.VisualStudio.Web.CodeGeneration.Design. Check the checkbox and click Add Package.
 
 ![](images/add-package-menu-vsmac.png)
 
-Repeat this to add the `Microsoft.EntityFrameworkCore.Sqlite` package.
+Repeat this to add the `Microsoft.EntityFrameworkCore.Sqlite` and `Microsoft.EntityFrameworkCore.Design` packages.
 
 #### Perform initial migration
 
