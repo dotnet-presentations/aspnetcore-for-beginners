@@ -89,11 +89,16 @@ Add the following using statements: `using RazorPagesMovie.Models` and `using Mi
 
 #### Add NuGet packages for scaffolding and Sqlite
 
+You will add two NuGet packages to the project.
+
+ - `Microsoft.VisualStudio.Web.CodeGeneration.Design`
+ - `Microsoft.EntityFrameworkCore.Sqlite`
+
 Add the `Microsoft.VisualStudio.Web.CodeGeneration.Design` to the project. Right click on Dependencies and select Add Packages in Solution Pad for the project. In the Add Packages dialog, search for Microsoft.VisualStudio.Web.CodeGeneration.Design. Check the checkbox and click Add Package.
 
 ![](images/add-package-menu-vsmac.png)
 
-Repeat this to add the Microsoft.EntityFrameworkCore.Sqlite package.
+Repeat this to add the `Microsoft.EntityFrameworkCore.Sqlite` package.
 
 #### Perform initial migration
 
