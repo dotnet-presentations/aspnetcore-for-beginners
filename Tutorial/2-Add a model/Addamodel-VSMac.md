@@ -83,6 +83,7 @@ Open Startup.cs file and add the code below to the ConfigureServices method.
 ``` cs
 public void ConfigureServices(IServiceCollection services)
 {
+    services.AddRazorPages();
     services.Configure<CookiePolicyOptions>(options =>
     {
         // This lambda determines whether user consent for non-essential cookies is needed for a given request.
