@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using RazorPagesMovie.Models;
+using Microsoft.Extensions.Hosting;
 
 namespace RazorPagesMovie
 {
@@ -33,12 +34,11 @@ namespace RazorPagesMovie
             });
 
             services.AddDbContext<MovieContext>(options => options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
-            services.AddMvc()
-            .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);       
+            services.AddMvc().AddMvcOptions(opt => opt.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
