@@ -36,7 +36,7 @@ public async Task OnGetAsync(string searchString)
 ```
 ### Test search string
 - Run your application 
-- Append the query string to the end `?searchString=Wrinkle`
+- Append the query string to the end `?searchString=avengers`
 
 ![](images/searchString.PNG)
 
