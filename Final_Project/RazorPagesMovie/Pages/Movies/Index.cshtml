@@ -4,11 +4,8 @@
 @{
     ViewData["Title"] = "Index";
 }
-@{
-    Layout = "_Layout";
-}
 
-<h2>Index</h2>
+<h1>Index</h1>
 
 <p>
     <a asp-page="Create">Create New</a>
@@ -18,26 +15,26 @@
         <select asp-for="MovieGenre" asp-items="Model.Genres">
             <option value="">All</option>
         </select>
-        
-        Movie Title:<input type="text" name="SearchString">
-         <input type="submit" value="Filter"/>
+
+        Movie Title: <input type="text" name="SearchString" />
+        <input type="submit" value="Filter"/>
     </p>
 </form>
 <table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Movie[0].Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Movie[0].ReleaseDate)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Movie[0].Genre)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Movie[0].Price)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].ReleaseDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Movie[0].Price)
+            </th>
             <th></th>
         </tr>
     </thead>
