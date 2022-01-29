@@ -50,13 +50,14 @@ public async Task OnGetAsync(string searchString)
 </p>
 <form>
     <p>
-        Movie Title:<input type="text" name="SearchString">
+        Movie Title:<input type="text" name="SearchString"/>
          <input type="submit" value="Filter"/>
     </p>
 </form>
 ```
 
-* Run the application with F5
+* Run the application **Debug > Run without Debugging**
+* If you haven't created a few movies, go ahead and do that now.
 * Enter a film title
 
 ![](images/searchform.PNG)
@@ -123,7 +124,8 @@ public async Task OnGetAsync(string movieGenre,string searchString)
 </form>
 ```
 
-* Run the application with F5
+* Run the application with **Debug > Run without Debugging**
+* Navigate to `https://localhost:{port}/Movies`
 
 ![](images/genre.PNG)
 
@@ -131,4 +133,4 @@ Mission Accomplished
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-You've have built your first Razor Page application
+You've have built your first Razor Page application with C# and ASP.NET Core!
