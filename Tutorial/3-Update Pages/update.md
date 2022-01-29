@@ -1,8 +1,9 @@
  
-The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
+The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
+
+* [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) 
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
@@ -15,7 +16,7 @@ In this quick tutorial we are going to learn how to update the generated pages. 
 
 * Open Models/Movie.cs
 * Add this using statement: `using System.ComponentModel.DataAnnotations;` 
-* Add the [following data annotations](https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6): 
+* Add the [following data annotations](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6): 
 `[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` as shown below:
 
 ``` cs

@@ -14,9 +14,8 @@ Install the following:
 ### Visual Studio
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
-* In the Visual Studio Installer, install the following workloads:
+* In the Visual Studio Installer, install the following workload:
   * ASP.NET and web development
-  * .NET Core cross-platform development
 
 ### Visual Studio for Mac
 

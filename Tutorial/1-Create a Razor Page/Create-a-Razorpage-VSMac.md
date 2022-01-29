@@ -1,7 +1,10 @@
-The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
+# Create a Razor Pages web app in Visual Studio for Mac
 
-### Prerequisites
-* [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
+
+## Prerequisites
+
+* [Visual Studio 2022 for Mac Preview](https://visualstudio.microsoft.com/vs/mac/preview/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio for Mac Installer, install the .NET Core target.
 
 ## Create a Razor web app
@@ -27,15 +30,15 @@ The template creates a starter project.
 
 ![](images/razor-page.png)
 
-#### Project Files and Folders explained
+## Project files and folders explained
 
 The following table lists the files and folders associated in the project.
 
-| Files or Folders       | Purpose        |
-| ------------- |-------------|
-| wwwroot      | Contains all the static files. For example CSS, images etc. | 
-| Pages     | This folder contains the pages for our application.      |    
-| Startup.cs | Configures services  we use in our application. For example adding user authentication through Microsoft, Google or Facebook account.   |
-| Program.cs | Host our ASP.NET Core application.*The host is responsible for app startup and lifetime management*     |  
+| Name                     | Description                                                                                         |
+| ------------------------ |-----------------------------------------------------------------------------------------------------|
+| *wwwroot/*               | Contains all the static files. For example CSS, images, and so on.                                  |
+| *Pages/*                 | Contains Razor Pages and supporting files. Each Razor page is a pair of files:<br/>- A *.cshtml* file that contains markup with C# code using Razor syntax.<br/>- A *.cshtml.cs* `PageModel` class file that defines page handler methods and data used to render the page.                                                                                        |
+| *RazorPagesMovie.csproj* | Contains configuration metadata for the project, such as dependencies.                              |
+| *Program.cs*             | Serves as the app's managed entry point and configures app behavior, such as routing between pages. |
 
 **NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel-VSMac.md)

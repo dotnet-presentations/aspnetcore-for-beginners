@@ -1,17 +1,22 @@
-The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
+# Create a Razor Pages web app in Visual Studio Code
 
-### Prerequisites
-* [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0) 
-*  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
+
+## Prerequisites
+
+* [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+* [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 
 ## Create a Razor web app
 
-Enter commands below in the terminal
+Enter the following commands in the terminal:
+
  ```console
 dotnet new razor -o RazorPagesMovie
 cd RazorPagesMovie
 dotnet run
 ```
+
 Open a browser and browse to https://localhost:5001/ to view the application.
 
 ![](images/razor-page.png)
@@ -26,12 +31,15 @@ Open a browser and browse to https://localhost:5001/ to view the application.
 
 ![](images/Openinginvscode.PNG)
 
-#### Project Files and Folders explained
-| Files or Folders       | Purpose        |
-| ------------- | ------------- |
-| wwwroot      | Contains all the static files. For example CSS, images etc. | 
-| Pages     | This folder contains the pages for our application.      |    
-| Startup.cs | Configures services  we use in our application. For example adding user authentication through Microsoft, Google or Facebook account.   |
-| Program.cs | Host our ASP.NET Core application.*The host is responsible for app startup and lifetime management*     |  
+## Project files and folders explained
+
+The following table lists the files and folders associated in the project.
+
+| Name                     | Description                                                                                         |
+| ------------------------ |-----------------------------------------------------------------------------------------------------|
+| *wwwroot/*               | Contains all the static files. For example CSS, images, and so on.                                  |
+| *Pages/*                 | Contains Razor Pages and supporting files. Each Razor page is a pair of files:<br/>- A *.cshtml* file that contains markup with C# code using Razor syntax.<br/>- A *.cshtml.cs* `PageModel` class file that defines page handler methods and data used to render the page.                                                                                        |
+| *RazorPagesMovie.csproj* | Contains configuration metadata for the project, such as dependencies.                              |
+| *Program.cs*             | Serves as the app's managed entry point and configures app behavior, such as routing between pages. |
 
 **NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel.md)

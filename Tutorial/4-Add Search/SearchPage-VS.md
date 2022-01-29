@@ -1,10 +1,11 @@
-The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
+The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
 
-### Prerequisites
-*  [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+## Prerequisites
+
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio Installer, install the following workloads:
-    * ASP.NET and web development
-    * .NET Core cross-platform development
+  * ASP.NET and web development
+
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage-VS.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel-VS.md)
 * Tutorial 3- [Update Page](../3-Update%20Pages/update-VS.md)
@@ -13,7 +14,7 @@ The tutorial below is based on [*"Get started with Razor Pages in ASP.NET Core"*
 
 In this quick tutorial we are going to search to the Index Page. By the end of this tutorial you can search by genre and name.
 
-#### Open Pages/Movies/Index.cshtml.cs and replace OnGetAsync with the following:
+### Open Pages/Movies/Index.cshtml.cs and replace OnGetAsync with the following
 
 ```csharp
 public async Task OnGetAsync(string searchString)
@@ -132,4 +133,4 @@ Mission Accomplished
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-You've have built your first Razor Page application
+You've have built your first Razor Page application!

@@ -1,7 +1,8 @@
-The tutorial below is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
+The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
 ### Prerequisites
-* [.NET Core SDK 3.0](https://dotnet.microsoft.com/download/dotnet-core/3.0)
+
+* [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 *  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 
@@ -29,8 +30,11 @@ namespace RazorPagesMovie.Models
     }
 }
 ```
+
 #### Add a database context class
+
 Create a new class named `MovieContext.cs` in the Models folder. The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
+
 ``` cs
 using Microsoft.EntityFrameworkCore;
 
@@ -47,6 +51,7 @@ namespace RazorPagesMovie.Models
     }
 }
 ```
+
 The code above creates a `DbSet`  property for the entity set. An entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
 
 #### Add a connection string
@@ -81,11 +86,13 @@ public void ConfigureServices(IServiceCollection services)
     services.AddMvc().AddMvcOptions(opt => opt.EnableEndpointRouting = false);
 }
 ```
+
 Add the following using statements: `using RazorPagesMovie.Models` and `using Microsoft.EntityFrameworkCore`.
 
 #### Add scaffold tooling and perform initial migration
 
-In the command line run the following commands
+In the command line, run the following commands:
+
  ```console
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 dotnet add package Microsoft.EntityFrameworkCore.Sqlite
@@ -111,7 +118,7 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 
 > Note: You will need to close and reopen the console window to be able to use this tool.
 
-Run the commands below
+Run the the following commands:
 
 *On Windows*
 
@@ -134,6 +141,6 @@ Run the commands below
 
 - Test Edit, Details and Delete links
 - 
-**Extra light read 7 minutes**: If you want to read more on pages we just created [click here for more information](https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages-vsc/page).
+**Extra light read 7 minutes**: If you want to read more on pages we just created [click here for more information](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/page).
 
 **NEXT TUTORIAL** :[Modifying generated pages](../3-Update%20Pages/update.md)
