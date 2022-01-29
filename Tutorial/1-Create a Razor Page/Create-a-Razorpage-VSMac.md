@@ -27,6 +27,7 @@ The template creates a starter project.
 ![](images/projectfiles-vsmac.png)
 
 * Run the application with Debug > Start Without Debugging.
+* If you see a dialog box for invalid certificate, select `Run` to install the ASP.NET Core debug certificate.
 
 ![](images/razor-page.png)
 
