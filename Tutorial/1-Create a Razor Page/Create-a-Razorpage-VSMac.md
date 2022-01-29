@@ -10,11 +10,11 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 ## Create a Razor web app
 
 * From the Visual Studio for Mac File menu, select New Solution.
-* Create a new ASP.NET Core Web Application with .NET Core > App > Web Application. Name the project RazorPagesMovie.
+* Create a new `ASP.NET Core Web Application` with  **Web and Console > ASP.NET Core > Web Application**. Name the project `RazorPagesMovie`.
 
 ![](images/newproject-vsmac.png)
 
-* Select ASP.NET Core 3.0 in the dropdown, and then select Web Application.
+* Select .NET 6.0 in the dropdown, and keep the other defaults.
 
 ![](images/createwebapp-vsmac.png)
 
@@ -26,7 +26,7 @@ The template creates a starter project.
 
 ![](images/projectfiles-vsmac.png)
 
-* Run the application with Run > Start without Debugging.
+* Run the application with Debug > Start Without Debugging.
 
 ![](images/razor-page.png)
 
