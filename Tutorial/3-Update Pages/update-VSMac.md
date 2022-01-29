@@ -18,26 +18,25 @@ In this quick tutorial we are going to learn how to update the generated pages. 
 ### Replace Movie.cs with the following
 
 ```csharp
-using System;
-namespace RazorPagesMovie.Models
+namespace RazorPagesMovie.Models;
+
+public class Movie
 {
-    public class Movie
-    {
-        public int ID { get; set; }
-        public string Title { get; set; }
+    public int ID { get; set; }
+    public string? Title { get; set; }
 
-        [Display(Name = "Release Date")]
-        [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
+    [Display(Name = "Release Date")]
+    [DataType(DataType.Date)]
+    public DateTime ReleaseDate { get; set; }
+    
+    public string? Genre { get; set; }
 
-        [Column(TypeName = "decimal(18, 2)")]
-        public decimal Price { get; set; }
-    }
+    [Column(TypeName = "decimal(18, 2)")]
+    public decimal Price { get; set; }
 }
 ```
 
-* Right click on a red line > Quick Fix...
+* Right click on a red line > `Quick Actions and Refactorings...` on the [Display] attribute
 
 ![](images/refactor_VSMac.png)
 
@@ -45,8 +44,9 @@ namespace RazorPagesMovie.Models
 
 ![](images/using_annotations_VSMac.png)
 
-* Right click on the remaining red line > Quick Fix... on the [Column] attribute and select using `System.ComponentModel.DataAnnotations.Schema;`
-* Run the application with Run > Start without Debugging and see the changes.
+* Right click on the remaining red line > `Quick Actions and Refactorings...` on the [Column] attribute and select using `System.ComponentModel.DataAnnotations.Schema;`
+* Run the application with Debug > Start without Debugging 
+* Naviget to `https://localhost:{port}/Movies/Create` and notice the changes.
 
 ![](images/NewPage.PNG)
 
