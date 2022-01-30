@@ -1,4 +1,4 @@
-# Add a model in Visual Studio Code
+# Add a data model in Visual Studio Code
 
 The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 

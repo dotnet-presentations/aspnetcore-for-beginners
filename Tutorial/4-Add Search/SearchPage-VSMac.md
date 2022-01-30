@@ -10,7 +10,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ## Adding Search to a page
 
-In this quick tutorial we are going to search to the Index Page. By the end of this tutorial you can search by genre and name.
+In this tutorial, you are going to add search to the Index Page. By the end of this tutorial, you can search by genre and name.
 
 #### Open Pages/Movies/Index.cshtml.cs and replace OnGetAsync with the following:
 
@@ -32,7 +32,7 @@ public async Task OnGetAsync(string searchString)
 ### Test search string
 
 * Run your application again with F5 and navigate back to the Movies Page
-* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:5000/Movies?searchString=avengers`)
+* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:{port}/Movies?searchString=avengers`)
 
 ![](images/searchString.PNG)
 

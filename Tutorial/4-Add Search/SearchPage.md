@@ -10,17 +10,20 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 ## Adding Search to a page
 
-In this quick tutorial we are going to search to the Index Page. By the end of this tutorial you can search by genre and name.
+In this tutorial, you are going to add search to the Index Page. By the end of this tutorial, you can search by genre and name.
 
 ### Update the Index page's `OnGetAsync` method
 
 #### Add code below to Movies/Index.cshtml
+
 ``` 
 @{
     Layout = "_Layout";
 }
 ```
+
 #### Edit the Movies/Index.cshtml.cs
+
 ``` cs
 public async Task OnGetAsync(string searchString)
 {
@@ -35,16 +38,20 @@ public async Task OnGetAsync(string searchString)
     Movie = await movies.ToListAsync();
 }
 ```
+
 ### Test search string
+
 - Run your application 
 - Append the query string to the end `?searchString=avengers`
 
 ![](images/searchString.PNG)
 
 ### Add a Search Box
+
 **Search by Title**
 
 #### Open the Index.cshtml file and add the`<form>`
+
 ```
 <h2>Index</h2>
 
@@ -58,15 +65,18 @@ public async Task OnGetAsync(string searchString)
     </p>
 </form>
 ```
-- Run the application `http://localhost:5000/movies` 
+
+- Run the application `http://localhost:{port}/movies`
 - Enter a film title
 
 ![](images/form.PNG)
 
 **Search by Genre**
+
 ### Add the code below to Pages/Movies/Index.cshtml.cs
 
 *Note you will need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
+
 ``` cs
 public class IndexModel : PageModel
 {
@@ -83,6 +93,7 @@ public class IndexModel : PageModel
 ```
 
 ### Update `OnGetAsync` method
+
 ``` cs
 public async Task OnGetAsync(string movieGenre,string searchString)
         {
@@ -106,7 +117,9 @@ public async Task OnGetAsync(string movieGenre,string searchString)
             Movie = await movies.ToListAsync();
         }
 ```
+
 ###  Update Index.cshtml
+
 ```
 <form>
     <p>
@@ -119,7 +132,8 @@ public async Task OnGetAsync(string movieGenre,string searchString)
     </p>
 </form>
 ```
-- Run the application `http://localhost:5000/movies`
+
+- Run the application `http://localhost:{port}/movies`
 
 ![](images/genre.PNG)
 
@@ -127,4 +141,4 @@ Mission Accomplished
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-You've have built your first Razor Page application
+You've have built your first Razor Page application!
