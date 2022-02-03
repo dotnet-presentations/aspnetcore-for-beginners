@@ -20,18 +20,29 @@ In this section, you are adding classes to manage movies in a database.
 1. Add the following code to the `Movie.cs` file:
 
     ``` cs
-    namespace RazorPagesMovie.Models
+    namespace RazorPagesMovie.Models;
+        
+    public class Movie
     {
-        public class Movie
-        {
-            public int ID { get; set; }
-            public string Title { get; set; }
-            public DateTime ReleaseDate { get; set; }
-            public string Genre { get; set; }
-            public decimal Price { get; set; }
-        }
+        public int ID { get; set; }
+        public string? Title { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public string? Genre { get; set; }
+        public decimal Price { get; set; }
     }
     ```
+    
+## Add Entity Framework NuGet Packages
+
+In the command line, run the following commands (You can open a new Terminal in VS Code via `Terminal -> New Terminal` :
+
+ ```console
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet restore
+```
 
 ## Add a database context class
 
@@ -40,17 +51,16 @@ Create a new class named `MovieContext.cs` in the Models folder. The database co
 ``` cs
 using Microsoft.EntityFrameworkCore;
 
-namespace RazorPagesMovie.Models
-{
-    public class MovieContext : DbContext
-    {
-        public MovieContext(DbContextOptions<MovieContext> options)
-                : base(options)
-        {
-        }
+namespace RazorPagesMovie.Models;
 
-        public DbSet<Movie> Movie { get; set; }
+public class MovieContext : DbContext 
+{
+    public MovieContext(DbContextOptions<MovieContext> options) 
+        : base(options) 
+    {
     }
+
+    public DbSet<Movie> Movie => Set<Movie>();
 }
 ```
 
@@ -63,11 +73,12 @@ Open the `appsettings.json` file and add the `MovieContext` connection string as
 ``` json
 {
   "Logging": {
-    "IncludeScopes": false,
     "LogLevel": {
-      "Default": "Warning"
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
     }
   },
+  "AllowHosts": "*",
   "ConnectionStrings": {
     "MovieContext": "Data Source=MvcMovie.db"
   }
@@ -76,33 +87,36 @@ Open the `appsettings.json` file and add the `MovieContext` connection string as
 
 ### Register the database context
 
-1. Open the `Startup.cs` file and add the following code to the `ConfigureServices` method:
+1. Open the `Program.cs` file.
+2. Add the following using directive at the top of the file.
+
+   ```cs
+   using RazorPagesMovie.Models;
+   ```
+
+3. Add the following code under `builder.Services.AddRazorPages();`:
 
     ``` cs
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.Configure<CookiePolicyOptions>(options =>
-        {
-            // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-            options.CheckConsentNeeded = context => true;
-            options.MinimumSameSitePolicy = SameSiteMode.None;
-        });
-    
-        services.AddDbContext<MovieContext>(options => options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
-        services.AddMvc().AddMvcOptions(opt => opt.EnableEndpointRouting = false);
-    }
+    var connectionString = builder.Configuration.GetConnectionString("MovieContext");
+    builder.Services.AddSqlite<MovieContext>(connectionString);
     ```
 
-1. Add the following using statements: `using RazorPagesMovie.Models` and `using Microsoft.EntityFrameworkCore`.
+## Perform initial migration
 
-## Add scaffold tooling and perform initial migration
+Save all files in the project. To run commands to create and manage migrations, you need to install the `dotnet ef` tool. Do that with the following command in the terminal (you can open a terminal inside of Visual Studio for Mac by right clicking on the project and selecting **Open in Terminal**).
 
-In the command line, run the following commands:
+```console
+dotnet tool install --global dotnet-ef
+```
+
+> Tip:
+> If `dotnet-ef` is already installed, you can update it with `dotnet tool update --global dotnet-ef`.
+
+For more information, see [Entity Framework Core tools reference - .NET Core CLI](https://docs.microsoft.com/ef/core/cli/dotnet).
+
+In the terminal, run the following commands in the project directory:
 
  ```console
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-dotnet add package Microsoft.EntityFrameworkCore.Sqlite
-dotnet restore
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 ```
@@ -115,7 +129,7 @@ Commands Explained
 | `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'MovieContext.cs'. `InitialCreate` is the name of the migrations. |  
 |`ef database update` | creates the database      |
 
-### Scaffold the movie model
+## Scaffold the movie model
 
 Install the `aspnet-codegenerator` global tool by running the following command:
 
@@ -123,7 +137,11 @@ Install the `aspnet-codegenerator` global tool by running the following command:
 dotnet tool install --global dotnet-aspnet-codegenerator
 ```
 
-> Note: You need to close and reopen the console window to be able to use this tool.
+> Tip:
+> If `dotnet-aspnet-codegenerator` is already installed, you can update it with `dotnet tool update --global dotnet-aspnet-codegenerator`.
+
+> Note:
+> You may need to close and reopen the console window to be able to use this tool.
 
 Run the the following commands:
 
