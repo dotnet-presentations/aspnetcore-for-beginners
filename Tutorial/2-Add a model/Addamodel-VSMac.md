@@ -102,7 +102,7 @@ Open the `appsettings.json` file and add the `MovieContext` connection string as
 2. Add the following using directive at the top of the file.
 
    ```cs
-   using RazorPagesMovie;
+   using RazorPagesMovie.Models;
    ```
 
 3. Add the following code under `builder.Services.AddRazorPages();`:
