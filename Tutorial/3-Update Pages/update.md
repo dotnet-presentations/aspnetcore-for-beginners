@@ -16,27 +16,28 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 In this tutorial, you are going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
 
 * Open Models/Movie.cs
-* Add this using statement: `using System.ComponentModel.DataAnnotations;`
+* Add this using statement: `using System.ComponentModel.DataAnnotations;` and `using System.ComponentModel.DataAnnotations.Schema;`
 * Add the [following data annotations](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6):
 `[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` as shown below:
 
 ``` cs
-using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+namespace RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Models
+public class Movie
 {
-    public class Movie
-    {
-        public int ID { get; set; }
-        public string Title { get; set; }
+    public int ID { get; set; }
+    public string? Title { get; set; }
 
-        [Display(Name = "Release Date")]
-        [DataType(DataType.Date)]
-        public DateTime ReleaseDate { get; set; }
-        public string Genre { get; set; }
-        public decimal Price { get; set; }
-    }
+    [Display(Name = "Release Date")]
+    [DataType(DataType.Date)]
+    public DateTime ReleaseDate { get; set; }
+    
+    public string? Genre { get; set; }
+
+    [Column(TypeName = "decimal(18, 2)")]
+    public decimal Price { get; set; }
 }
 ```
 - run the app to see the update `dotnet run`
