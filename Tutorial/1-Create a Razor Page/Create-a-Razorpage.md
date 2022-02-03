@@ -6,18 +6,19 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 * [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 * [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [C# Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
 ## Create a Razor web app
 
 Enter the following commands in the terminal:
 
  ```console
-dotnet new razor -o RazorPagesMovie
+dotnet new razor -o RazorPagesMovie -f net6.0
 cd RazorPagesMovie
 dotnet run
 ```
 
-Open a browser and browse to https://localhost:5001/ to view the application.
+Open a browser and browse to https://localhost:{PORT}/ to view the application. The {PORT} will be visible in the output in terminal.
 
 ![](images/razor-page.png)
 
@@ -27,7 +28,7 @@ Open a browser and browse to https://localhost:5001/ to view the application.
 - Open your project in VS Code using one of the following options 
     - select File > Open Folder, and then select the RazorPagesMovie folder
     - or enter the following command in the terminal `code .`
-- Click Yes to the prompt *"Required assets to build and debug are missing from 'RazorPagesMovie'. Add them?"*
+- Click **Yes** to the prompt *"Required assets to build and debug are missing from 'RazorPagesMovie'. Add them?"*
 
 ![](images/Openinginvscode.PNG)
 
