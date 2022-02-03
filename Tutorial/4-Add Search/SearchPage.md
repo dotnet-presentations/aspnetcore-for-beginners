@@ -14,13 +14,6 @@ In this tutorial, you are going to add search to the Index Page. By the end of t
 
 ### Update the Index page's `OnGetAsync` method
 
-#### Add code below to Movies/Index.cshtml
-
-``` 
-@{
-    Layout = "_Layout";
-}
-```
 
 #### Edit the Movies/Index.cshtml.cs
 
@@ -66,7 +59,7 @@ public async Task OnGetAsync(string searchString)
 </form>
 ```
 
-- Run the application `http://localhost:{port}/movies`
+- Run the application with `dotnet run` and then go to `http://localhost:{port}/movies`
 - Enter a film title
 
 ![](images/form.PNG)
@@ -96,26 +89,26 @@ public class IndexModel : PageModel
 
 ``` cs
 public async Task OnGetAsync(string movieGenre,string searchString)
-        {
-            IQueryable<string> genreQuery = from m in _context.Movie
-                                    orderby m.Genre
-                                    select m.Genre;
+{
+    IQueryable<string> genreQuery = from m in _context.Movie
+                            orderby m.Genre
+                            select m.Genre;
 
-            var movies = from m in _context.Movie
-                        select m;
+    var movies = from m in _context.Movie
+                select m;
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                movies = movies.Where(s => s.Title.Contains(searchString));
-            }
+    if (!String.IsNullOrEmpty(searchString))
+    {
+        movies = movies.Where(s => s.Title.Contains(searchString));
+    }
 
-            if (!String.IsNullOrEmpty(movieGenre))
-            {
-                movies = movies.Where(x => x.Genre == movieGenre);
-            }
-            Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
-            Movie = await movies.ToListAsync();
-        }
+    if (!String.IsNullOrEmpty(movieGenre))
+    {
+        movies = movies.Where(x => x.Genre == movieGenre);
+    }
+    Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
+    Movie = await movies.ToListAsync();
+}
 ```
 
 ###  Update Index.cshtml
