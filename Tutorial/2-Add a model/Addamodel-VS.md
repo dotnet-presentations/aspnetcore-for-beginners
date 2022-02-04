@@ -102,7 +102,8 @@ builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
 ```
 
 to the following:
-```
+
+```csharp
     var connectionString = builder.Configuration.GetConnectionString("RazorPagesMovieContext");
     builder.Services.AddSqlite<RazorPagesMovieContext>(connectionString);
 ```
