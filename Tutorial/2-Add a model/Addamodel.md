@@ -34,7 +34,7 @@ In this section, you're adding classes to manage movies in a database.
 
 ## Add Entity Framework NuGet Packages
 
-In the command line, run the following commands (you can open a new Terminal in VS Code via **Terminal** > **New Terminal**) :
+In the command line, run the following commands (you can open a new Terminal in VS Code via **Terminal** > **New Terminal**):
 
  ```console
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
@@ -46,35 +46,34 @@ dotnet restore
 
 ## Add a database context class
 
-
 1. Add a folder named **Data**.
 
-1. Create a new class named `RazorPagesMovieContext.cs` in the Models folder. 
+1. Create a new class named `RazorPagesMovieContext.cs` in the Models folder.
 
-The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
+    The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
 
-``` cs
-using Microsoft.EntityFrameworkCore;
-using RazorPagesModel.Models;
-
-namespace RazorPagesMovie.Data;
-
-public class RazorPagesMovieContext : DbContext 
-{
-    public RazorPagesMovieContext(DbContextOptions<RazorPagesMovieContext> options) 
-        : base(options) 
+    ``` cs
+    using Microsoft.EntityFrameworkCore;
+    using RazorPagesModel.Models;
+    
+    namespace RazorPagesMovie.Data;
+    
+    public class RazorPagesMovieContext : DbContext 
     {
+        public RazorPagesMovieContext(DbContextOptions<RazorPagesMovieContext> options) 
+            : base(options) 
+        {
+        }
+    
+        public DbSet<Movie> Movie => Set<Movie>();
     }
-
-    public DbSet<Movie> Movie => Set<Movie>();
-}
-```
+    ```
 
 The previous code creates a `DbSet` property for the entity set. An entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
 
 ### Add a connection string
 
-Open the `appsettings.json` file and add the `RazorPagesMovieContext` connection string as shown below.
+Open the `appsettings.json` file and add the `RazorPagesMovieContext` connection string as shown in the following code:
 
 ``` json
 {
@@ -94,7 +93,7 @@ Open the `appsettings.json` file and add the `RazorPagesMovieContext` connection
 ### Register the database context
 
 1. Open the `Program.cs` file.
-2. Add the following using directive at the top of the file.
+2. Add the following using statement at the top of the file.
 
    ```cs
    using RazorPagesMovie.Data;
@@ -129,11 +128,11 @@ dotnet ef database update
 
 Commands Explained
 
-| Command       |Description       |
-| ------------- |-------------|
-| ` add package`    | installs the tools needed |
-| `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'RazorPagesMovieContext.cs'. `InitialCreate` is the name of the migrations. |  
-|`ef database update` | creates the database      |
+| Command                           |Description                                                                                                                                                       |
+| --------------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `add package`                     | Installs the tools needed.                                                                                                                                       |
+| `ef migrations add InitialCreate` | Generates code to create the initial database schema based on the model specified in 'RazorPagesMovieContext.cs'. `InitialCreate` is the name of the migrations. |  
+| `ef database update`              | Creates the database.                                                                                                                                            |
 
 ## Scaffold the movie model
 
@@ -151,13 +150,17 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 
 Run the the following commands:
 
-*On Windows*
+### On Windows
 
-`dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages\Movies --referenceScriptLibraries`
+```console
+dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages\Movies --referenceScriptLibraries
+```
 
-*On Mac and Linux*
+### On macOS and Linux
 
-`dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries`
+```console
+dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries
+```
 
 ## Test your app
 
@@ -178,4 +181,4 @@ Run the the following commands:
 
 **Extra light read 7 minutes**: If you want to read more on pages you just created, see the [Part 3, scaffolded Razor Pages in ASP.NET Core](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/page) article.
 
-**NEXT TUTORIAL** :[Modifying generated pages](../3-Update%20Pages/update.md)
+**NEXT TUTORIAL:** [Modifying generated pages](../3-Update%20Pages/update.md)

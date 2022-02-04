@@ -142,4 +142,4 @@ If you get a SQL exception, verify you have run migrations and updated the datab
 
 **Extra light read 7 minutes**: If you want to read more on pages you just created [click here for more information](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages/page).
 
-**NEXT TUTORIAL** - [Modifying generated pages](../3-Update%20Pages/update-VS.md)
+**NEXT TUTORIAL:** [Modifying generated pages](../3-Update%20Pages/update-VS.md)

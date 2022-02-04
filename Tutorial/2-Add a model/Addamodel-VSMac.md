@@ -56,7 +56,7 @@ Repeat these steps to add the following packages:
 
 1. Add a folder named **Data**.
 
-1. Create a new class named `RazorPagesMovieContext.cs` in the Models folder. 
+1. Create a new class named `RazorPagesMovieContext.cs` in the `Data` folder.
 
 The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions. Add the following code:
 
@@ -77,7 +77,7 @@ public class RazorPagesMovieContext : DbContext
 }
 ```
 
-The previous code creates a `DbSet`  property for the entity set. An entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
+The previous code creates a `DbSet` property for the entity set. An entity set typically corresponds to a database table, and an entity corresponds to a row in the table.
 
 ## Add a connection string
 
@@ -136,11 +136,11 @@ dotnet ef database update
 
 Commands Explained
 
-| Command       |Description       |
-| ------------- |-------------|
-| ` add package`    | installs the tools needed |
-| `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'RazorPagesMovieContext.cs'. `InitialCreate` is the name of the migrations. |  
-|`ef database update` | creates the database      |
+| Command                           |Description                                                                                                                                                       |
+| --------------------------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `add package`                     | Installs the tools needed.                                                                                                                                       |
+| `ef migrations add InitialCreate` | Generates code to create the initial database schema based on the model specified in 'RazorPagesMovieContext.cs'. `InitialCreate` is the name of the migrations. |  
+| `ef database update`              | Creates the database.                                                                                                                                            |
 
 ## Scaffold the movie model
 
@@ -162,9 +162,9 @@ Run the following command:
 
 ## Test your app
 
-1. Build the application with **Build > Rebuild Solution**.
-1. Run the application with **Debug > Start without Debugging**.
-1. Append /movies to the URL in the browser: https://localhost:{port}/movies
+1. Build the application with **Build** > **Rebuild Solution**.
+1. Run the application with **Debug** > **Start without Debugging**.
+1. Append `/movies` to the URL in the browser: https://localhost:{port}/movies
 
     ![](images/moviespage.PNG)
 
@@ -176,10 +176,10 @@ Run the following command:
 
     ![](images/newentry.PNG)
 
-1. Test the Edit, Details and Delete links
+1. Test the Edit, Details and Delete links.
   
 If you get a SQL exception, verify you have run migrations and updated the database.
 
 **Extra light read 7 minutes**: If you want to read more on pages you just created, see the [Part 3, scaffolded Razor Pages in ASP.NET Core](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/page) article.
 
-**NEXT TUTORIAL** - [Modifying generated pages](../3-Update%20Pages/update-VSMac.md)
+**NEXT TUTORIAL:** [Modifying generated pages](../3-Update%20Pages/update-VSMac.md)

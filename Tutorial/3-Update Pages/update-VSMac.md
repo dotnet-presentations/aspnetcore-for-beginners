@@ -15,41 +15,41 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 In this tutorial, you're going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
 
-* Open Models/Movie.cs
+1. Open the `Models/Movie.cs` file.
+1. Replace the contents of the `Movie.cs` file with the following code:
 
-### Replace Movie.cs with the following
-
-```csharp
-namespace RazorPagesMovie.Models;
-
-public class Movie
-{
-    public int ID { get; set; }
-    public string? Title { get; set; }
-
-    [Display(Name = "Release Date")]
-    [DataType(DataType.Date)]
-    public DateTime ReleaseDate { get; set; }
+    ```csharp
+    namespace RazorPagesMovie.Models;
     
-    public string? Genre { get; set; }
+    public class Movie
+    {
+        public int ID { get; set; }
+        public string? Title { get; set; }
+    
+        [Display(Name = "Release Date")]
+        [DataType(DataType.Date)]
+        public DateTime ReleaseDate { get; set; }
+        
+        public string? Genre { get; set; }
+    
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Price { get; set; }
+    }
+    ```
 
-    [Column(TypeName = "decimal(18, 2)")]
-    public decimal Price { get; set; }
-}
-```
+* Right click on a red line and select **Quick Actions and Refactorings** on the [Display] attribute.
 
-* Right click on a red line > **Quick Actions and Refactorings** on the [Display] attribute.
+    ![](images/refactor_VSMac.png)
 
-![](images/refactor_VSMac.png)
+1. Select **using System.ComponentModel.DataAnnotations;**.
 
-* Select `using System.ComponentModel.DataAnnotations;`
+    ![](images/using_annotations_VSMac.png)
 
-![](images/using_annotations_VSMac.png)
-
-* Right click on the remaining red line > **Quick Actions and Refactorings** on the [Column] attribute and select using `System.ComponentModel.DataAnnotations.Schema;`
-* Run the application with **Debug** > **Start without Debugging**.
-* Navigate to `https://localhost:{port}/Movies/Create` and notice the changes.
+1. Right click on the remaining red line, select **Quick Actions and Refactorings** on the [Column] attribute.
+1. Select **using System.ComponentModel.DataAnnotations.Schema;**.
+1. Run the application by selecting **Debug** > **Start without Debugging** on the main menu.
+1. Navigate to `https://localhost:{port}/Movies/Create` and notice the changes.
 
 ![](images/NewPage.PNG)
 
-**NEXT TUTORIAL** - [Adding search](../4-Add%20Search/SearchPage-VSMac.md)
+**NEXT TUTORIAL:** [Adding search](../4-Add%20Search/SearchPage-VSMac.md)

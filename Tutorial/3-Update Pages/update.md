@@ -15,34 +15,41 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 In this tutorial, you're going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
 
-* Open Models/Movie.cs
-* Add this using statement: `using System.ComponentModel.DataAnnotations;` and `using System.ComponentModel.DataAnnotations.Schema;`
-* Add the [following data annotations](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6):
-`[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` as shown below:
+1. Open the `Models/Movie.cs` file.
+1. Add the following using statements to the top of the file:
 
-``` cs
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-namespace RazorPagesMovie.Models;
+    ```csharp
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    ```
 
-public class Movie
-{
-    public int ID { get; set; }
-    public string? Title { get; set; }
+1. Add the [following data annotations](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/mvc-music-store/mvc-music-store-part-6):
+`[Display(Name = "Release Date")]` and `[DataType(DataType.Date)]` to the `ReleaseDate` property as shown in the following code:
 
-    [Display(Name = "Release Date")]
-    [DataType(DataType.Date)]
-    public DateTime ReleaseDate { get; set; }
+    ``` cs
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+    namespace RazorPagesMovie.Models;
     
-    public string? Genre { get; set; }
+    public class Movie
+    {
+        public int ID { get; set; }
+        public string? Title { get; set; }
+    
+        [Display(Name = "Release Date")]
+        [DataType(DataType.Date)]
+        public DateTime ReleaseDate { get; set; }
+        
+        public string? Genre { get; set; }
+    
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Price { get; set; }
+    }
+    ```
 
-    [Column(TypeName = "decimal(18, 2)")]
-    public decimal Price { get; set; }
-}
-```
+1. Run the app using the `dotnet run` command.
+1. Navigate to `https://localhost:{port}/Movies/Create` and notice the changes.
 
-* Run the app to see the updated page using the `dotnet run` command.
+    ![](images/NewPage.PNG)
 
-![](images/NewPage.PNG)
-
-**NEXT TUTORIAL** :[Adding search](../4-Add%20Search/SearchPage.md)
+**NEXT TUTORIAL:** [Adding search](../4-Add%20Search/SearchPage.md)

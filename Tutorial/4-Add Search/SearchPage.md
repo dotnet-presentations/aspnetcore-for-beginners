@@ -14,9 +14,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 In this tutorial, you're going to add search to the Index Page. By the end of this tutorial, you'll be able to search by genre and name.
 
-## Update the Index page's `OnGetAsync` method
-
-### Edit the Movies/Index.cshtml.cs
+Open `Pages/Movies/Index.cshtml.cs` and replace the `OnGetAsync` method with the following code:
 
 ``` cs
 public async Task OnGetAsync(string searchString)
@@ -35,14 +33,14 @@ public async Task OnGetAsync(string searchString)
 
 ### Test search string
 
-* Run your application.
-* Append the query string to the end `?searchString=panther`
+* Run your application by typing `dotnet run` on the terminal and open the Movies Page (`http://localhost:{port}/Movies`).
+* Append the query string to the end `?searchString=[Film Title]` (for example, `http://localhost:{port}/Movies?searchString=panther`)
 
 ![](images/searchString.PNG)
 
 ### Add a Search Box
 
-**Search by Title**
+#### Search by Title
 
 1. Open the `Index.cshtml` file and add the `<form>` element as shown in the following code:
 
@@ -60,78 +58,78 @@ public async Task OnGetAsync(string searchString)
     </form>
     ```
 
-1. Run the application with `dotnet run` and then go to `http://localhost:{port}/movies`
-1. Enter a film title.
+1. Run your application by typing `dotnet run` on the terminal and open the Movies Page (`http://localhost:{port}/Movies`).
+1. Enter a film title in the search box.
 
-![](images/form.PNG)
+    ![](images/searchform.PNG)
 
-**Search by Genre**
+#### Search by Genre
 
-### Add the code below to Pages/Movies/Index.cshtml.cs
+1. Open the `Pages/Movies/Index.cshtml.cs` file and add the following code:
 
-*Note you need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
-
-``` cs
-public class IndexModel : PageModel
-{
-    private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
-
-    public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+    ``` cs
+    public class IndexModel : PageModel
     {
-        _context = context;
-    }
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
+    
+        public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+        {
+            _context = context;
+        }
+    
+        public IList<Movie> Movie;
+        public SelectList Genres;
+        public string MovieGenre { get; set; }
+    ```
 
-    public IList<Movie> Movie;
-    public SelectList Genres;
-    public string MovieGenre { get; set; }
-```
+1. Add `using Microsoft.AspNetCore.Mvc.Rendering;` to the top of the class.
+1. Update the `OnGetAsync` method on that same file:
 
-### Update `OnGetAsync` method
-
-``` cs
-public async Task OnGetAsync(string movieGenre,string searchString)
-{
-    IQueryable<string> genreQuery = from m in _context.Movie
-                            orderby m.Genre
-                            select m.Genre;
-
-    var movies = from m in _context.Movie
-                select m;
-
-    if (!String.IsNullOrEmpty(searchString))
+    ``` cs
+    public async Task OnGetAsync(string movieGenre,string searchString)
     {
-        movies = movies.Where(s => s.Title.Contains(searchString));
+        IQueryable<string> genreQuery = from m in _context.Movie
+                                orderby m.Genre
+                                select m.Genre;
+    
+        var movies = from m in _context.Movie
+                    select m;
+    
+        if (!String.IsNullOrEmpty(searchString))
+        {
+            movies = movies.Where(s => s.Title.Contains(searchString));
+        }
+    
+        if (!String.IsNullOrEmpty(movieGenre))
+        {
+            movies = movies.Where(x => x.Genre == movieGenre);
+        }
+        Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
+        Movie = await movies.ToListAsync();
     }
+    ```
 
-    if (!String.IsNullOrEmpty(movieGenre))
-    {
-        movies = movies.Where(x => x.Genre == movieGenre);
-    }
-    Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
-    Movie = await movies.ToListAsync();
-}
-```
+1. Open the `Pages/Movies/Index.cshtml` file and update the form element code:
 
-###  Update Index.cshtml
+    ```html
+    <form>
+        <p>
+            <select asp-for="MovieGenre" asp-items="Model.Genres">
+                <option value="">All</option>
+            </select>
+            
+            Movie Title: <input type="text" name="SearchString">
+             <input type="submit" value="Filter"/>
+        </p>
+    </form>
+    ```
 
-```
-<form>
-    <p>
-        <select asp-for="MovieGenre" asp-items="Model.Genres">
-            <option value="">All</option>
-        </select>
-        
-        Movie Title: <input type="text" name="SearchString">
-         <input type="submit" value="Filter"/>
-    </p>
-</form>
-```
+1. Run your application by typing `dotnet run` on the terminal and open the Movies Page (`http://localhost:{port}/Movies`).
+1. Enter a film genre in the drop down control.
 
-- Run the application `http://localhost:{port}/movies`
+    ![](images/genre.PNG)
 
-![](images/genre.PNG)
-
-Mission Accomplished
+Mission accomplished!
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 

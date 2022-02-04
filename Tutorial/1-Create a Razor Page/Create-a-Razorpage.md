@@ -22,15 +22,16 @@ Open a browser and browse to https://localhost:{PORT}/ to view the application. 
 
 ![](images/razor-page.png)
 
-#### Open project in VS Code
+## Open project in VS Code
 
-- Shut down your application using `Ctrl+C`.
-- Open your project in VS Code using one of the following options 
-    - select File > Open Folder, and then select the RazorPagesMovie folder
-    - or enter the following command in the terminal `code .`
-- Click **Yes** to the prompt *"Required assets to build and debug are missing from 'RazorPagesMovie'. Add them?"*
+* Shut down your application using `Ctrl+C`.
+* Open your project in VS Code using one of the following options:
+  * Select **File** > **Open Folder**, and then select the `RazorPagesMovie` folder.
+  * Enter the following command in the terminal `code .`
+* If you get the prompt **Do you trust the authors of the files in this folder**, select **Yes, I trust the authors**.
+* If you get the prompt **Required assets to build and debug are missing from 'RazorPagesMovie'. Add them?"**, select **Yes**.
 
-![](images/Openinginvscode.PNG)
+![](images/open-vs-code.png)
 
 ## Project files and folders explained
 
@@ -43,4 +44,4 @@ The following table lists the files and folders associated in the project.
 | *RazorPagesMovie.csproj* | Contains configuration metadata for the project, such as dependencies.                              |
 | *Program.cs*             | Serves as the app's managed entry point and configures app behavior, such as routing between pages. |
 
-**NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel.md)
+**NEXT TUTORIAL:** [Adding a Model](../2-Add%20a%20model/Addamodel.md)

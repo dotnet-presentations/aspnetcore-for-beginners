@@ -14,7 +14,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ## Adding Search to a page
 
-In this tutorial, you're going to search to the Index Page. By the end of this tutorial, you can search by genre and name.
+In this tutorial, you're going to search to the Index Page. By the end of this tutorial, you'll be able to search by genre and name.
 
 Open `Pages/Movies/Index.cshtml.cs` and replace the `OnGetAsync` method with the following code:
 
@@ -36,36 +36,36 @@ public async Task OnGetAsync(string searchString)
 ### Test search string
 
 * Run your application with F5 and open the Movies Page (`http://localhost:{port}/Movies`).
-* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:{port}/Movies?searchString=panther`)
+* Append the query string to the end `?searchString=[Film Title]` (for example, `http://localhost:{port}/Movies?searchString=panther`)
 
 ![](images/searchString.PNG)
 
 ### Add a Search Box
 
-**Search by Title**
+#### Search by Title
 
-Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown in the following code:
+1. Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown in the following code:
 
-```html
-<h2>Index</h2>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<form>
+    ```html
+    <h2>Index</h2>
+    
     <p>
-        Movie Title: <input type="text" name="SearchString">
-         <input type="submit" value="Filter"/>
+        <a asp-page="Create">Create New</a>
     </p>
-</form>
-```
+    <form>
+        <p>
+            Movie Title: <input type="text" name="SearchString">
+            <input type="submit" value="Filter"/>
+        </p>
+    </form>
+    ```
 
-* Run the application with F5 and open the Movies Page (`http://localhost:{port}/Movies`).
-* Enter a film title in the search box.
+1. Run the application with F5 and open the Movies Page (`http://localhost:{port}/Movies`).
+1. Enter a film title in the search box.
 
-![](images/searchform.PNG)
+    ![](images/searchform.PNG)
 
-**Search by Genre**
+#### Search by Genre
 
 1. Open the `Pages/Movies/Index.cshtml.cs` file and add the following code:
 
@@ -84,8 +84,7 @@ Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown 
         public string MovieGenre { get; set; }
     ```
 
-    * Note: you need to add `using Microsoft.AspNetCore.Mvc.Rendering;`* to the top of the class.
-
+1. Add `using Microsoft.AspNetCore.Mvc.Rendering;` to the top of the class.
 1. Update the `OnGetAsync` method on that same file:
 
     ```csharp
@@ -114,7 +113,7 @@ Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown 
 
 1. Open the `Pages/Movies/Index.cshtml` file and update the form element code:
 
-    ```
+    ```html
     <form>
         <p>
             <select asp-for="MovieGenre" asp-items="Model.Genres">
@@ -122,18 +121,18 @@ Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown 
             </select>
             
             Movie Title: <input type="text" name="SearchString">
-             <input type="submit" value="Filter"/>
+            <input type="submit" value="Filter"/>
         </p>
     </form>
     ```
 
-* Run the application with F5 and open the Movies Page (`http://localhost:{port}/Movies`).
-* Enter a film genre in the drop down control.
+1. Run the application with F5 and open the Movies Page (`http://localhost:{port}/Movies`).
+1. Enter a film genre in the drop down control.
 
-![](images/genre.PNG)
+    ![](images/genre.PNG)
 
 Mission accomplished!
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-Congratulations! You've built your first Razor Page application!
+Congratulations! You've built your first Razor Page application.

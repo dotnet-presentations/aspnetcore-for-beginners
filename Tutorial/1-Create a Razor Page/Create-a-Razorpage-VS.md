@@ -51,4 +51,4 @@ The following table lists the files and folders associated in the project.
 | *RazorPagesMovie.csproj* | Contains configuration metadata for the project, such as dependencies.                              |
 | *Program.cs*             | Serves as the app's managed entry point and configures app behavior, such as routing between pages. |  
 
-**NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel-VS.md)
+**NEXT TUTORIAL:** [Adding a Model](../2-Add%20a%20model/Addamodel-VS.md)

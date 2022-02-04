@@ -26,8 +26,8 @@ The template creates a starter project.
 
 ![](images/projectfiles-vsmac.png)
 
-* Run the application with Debug > Start Without Debugging.
-* If you see a dialog box for invalid certificate, select `Run` to install the ASP.NET Core debug certificate.
+* Run the application with **Debug** > **Start Without Debugging**.
+* If you see a dialog box for invalid certificate, select **Run** to install the ASP.NET Core debug certificate.
 
 ![](images/razor-page.png)
 
@@ -42,4 +42,4 @@ The following table lists the files and folders associated in the project.
 | *RazorPagesMovie.csproj* | Contains configuration metadata for the project, such as dependencies.                              |
 | *Program.cs*             | Serves as the app's managed entry point and configures app behavior, such as routing between pages. |
 
-**NEXT TUTORIAL** - [Adding a Model](../2-Add%20a%20model/Addamodel-VSMac.md)
+**NEXT TUTORIAL:** [Adding a Model](../2-Add%20a%20model/Addamodel-VSMac.md)

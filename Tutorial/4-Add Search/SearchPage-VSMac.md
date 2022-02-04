@@ -12,9 +12,9 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ## Adding Search to a page
 
-In this tutorial, you're going to add search to the Index Page. By the end of this tutorial, you can search by genre and name.
+In this tutorial, you're going to add search to the Index Page. By the end of this tutorial, you'll be able to search by genre and name.
 
-#### Open Pages/Movies/Index.cshtml.cs and replace OnGetAsync with the following:
+Open `Pages/Movies/Index.cshtml.cs` and replace the `OnGetAsync` method with the following code:
 
 ```csharp
 public async Task OnGetAsync(string searchString)
@@ -33,106 +33,106 @@ public async Task OnGetAsync(string searchString)
 
 ### Test search string
 
-* Run your application again with F5 and navigate back to the Movies Page
-* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:{port}/Movies?searchString=panther`)
+* Run your application with F5 and open the Movies Page (`http://localhost:{port}/Movies`).
+* Append the query string to the end `?searchString=[Film Title]` (for example, `http://localhost:{port}/Movies?searchString=panther`)
 
-![](images/searchString.PNG)
+    ![](images/searchString.PNG)
 
 ### Add a Search Box
 
-**Search by Title**
+#### Search by Title
 
-#### Open the Pages/Movies/Index.cshtml file and add the`<form>`
+1. Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown in the following code:
 
-```csharp
-<h2>Index</h2>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<form>
+    ```html
+    <h2>Index</h2>
+    
     <p>
-        Movie Title:<input type="text" name="SearchString"/>
-         <input type="submit" value="Filter"/>
+        <a asp-page="Create">Create New</a>
     </p>
-</form>
-```
+    <form>
+        <p>
+            Movie Title: <input type="text" name="SearchString"/>
+            <input type="submit" value="Filter"/>
+        </p>
+    </form>
+    ```
 
-* Run the application **Debug > Run without Debugging**
-* If you haven't created a few movies, go ahead and do that now.
-* Enter a film title
+1. Run the application by selecting **Debug** > **Run without Debugging** on the main menu.
+1. If you haven't created a few movies, go ahead and do that now.
+1. Enter a film title in the search box.
 
-![](images/searchform.PNG)
+    ![](images/searchform.PNG)
 
-**Search by Genre**
+#### Search by Genre
 
-### Add the code below to Pages/Movies/Index.cshtml.cs
+1. Open the `Pages/Movies/Index.cshtml.cs` file and add the following code::
 
-*Note: you need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
-
-```csharp
-public class IndexModel : PageModel
-{
-    private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
-
-    public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+    ```csharp
+    public class IndexModel : PageModel
     {
-        _context = context;
-    }
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
+    
+        public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+        {
+            _context = context;
+        }
+    
+        public IList<Movie> Movie;
+        public SelectList Genres;
+        public string MovieGenre { get; set; }
+    ```
 
-    public IList<Movie> Movie;
-    public SelectList Genres;
-    public string MovieGenre { get; set; }
-```
+1. Add `using Microsoft.AspNetCore.Mvc.Rendering;` to the top of the class.
 
-### Update `OnGetAsync` method
+1. Update the `OnGetAsync` method on that same file:
 
-```csharp
-public async Task OnGetAsync(string movieGenre,string searchString)
-{
-    IQueryable<string> genreQuery = from m in _context.Movie
-                            orderby m.Genre
-                            select m.Genre;
-
-    var movies = from m in _context.Movie
-                select m;
-
-    if (!String.IsNullOrEmpty(searchString))
+    ```csharp
+    public async Task OnGetAsync(string movieGenre,string searchString)
     {
-        movies = movies.Where(s => s.Title.Contains(searchString));
+        IQueryable<string> genreQuery = from m in _context.Movie
+                                orderby m.Genre
+                                select m.Genre;
+    
+        var movies = from m in _context.Movie
+                    select m;
+    
+        if (!String.IsNullOrEmpty(searchString))
+        {
+            movies = movies.Where(s => s.Title.Contains(searchString));
+        }
+    
+        if (!String.IsNullOrEmpty(movieGenre))
+        {
+            movies = movies.Where(x => x.Genre == movieGenre);
+        }
+        Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
+        Movie = await movies.ToListAsync();
     }
+    ```
 
-    if (!String.IsNullOrEmpty(movieGenre))
-    {
-        movies = movies.Where(x => x.Genre == movieGenre);
-    }
-    Genres = new SelectList(await genreQuery.Distinct().ToListAsync());
-    Movie = await movies.ToListAsync();
-}
-```
+1. Open the `Pages/Movies/Index.cshtml` file and update the form element code:
 
-### Update Index.cshtml
+    ```html
+    <form>
+        <p>
+            <select asp-for="MovieGenre" asp-items="Model.Genres">
+                <option value="">All</option>
+            </select>
+            
+            Movie Title: <input type="text" name="SearchString">
+             <input type="submit" value="Filter"/>
+        </p>
+    </form>
+    ```
 
-```
-<form>
-    <p>
-        <select asp-for="MovieGenre" asp-items="Model.Genres">
-            <option value="">All</option>
-        </select>
-        
-        Movie Title: <input type="text" name="SearchString">
-         <input type="submit" value="Filter"/>
-    </p>
-</form>
-```
-
-* Run the application with **Debug > Run without Debugging**
+* Run the application by selecting **Debug** > **Run without Debugging** on the main menu.
 * Navigate to `https://localhost:{port}/Movies`
 
-![](images/genre.PNG)
+    ![](images/genre.PNG)
 
-Mission Accomplished
+Mission accomplished!
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-You've built your first Razor Page application with C# and ASP.NET Core!
+You've built your first Razor Page application with C# and ASP.NET Core.
