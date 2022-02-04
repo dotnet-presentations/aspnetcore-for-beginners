@@ -1,6 +1,7 @@
 # ASP.NET Core for Beginners - Workshop
 
 This is a half day workshop for developers who are completely new to .NET Core and ASP.NET.
+
 [![build](https://github.com/dotnet-presentations/aspnetcore-for-beginners/actions/workflows/build-validation.yml/badge.svg)](https://github.com/dotnet-presentations/aspnetcore-for-beginners/actions/workflows/build-validation.yml)
 ## Setup
 
