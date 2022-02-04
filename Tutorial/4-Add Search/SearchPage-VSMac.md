@@ -73,9 +73,9 @@ public async Task OnGetAsync(string searchString)
 ```csharp
 public class IndexModel : PageModel
 {
-    private readonly RazorPagesMovie.Models.MovieContext _context;
+    private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
 
-    public IndexModel(RazorPagesMovie.Models.MovieContext context)
+    public IndexModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
     {
         _context = context;
     }

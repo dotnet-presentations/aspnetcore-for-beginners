@@ -54,19 +54,21 @@ Repeat these steps to add the following packages:
 
 ## Add a database context class
 
-* Right click the Models folder. Select **Add** > **New Class**.
-* Select **General** > **Empty Class** and name the class `MovieContext`.
+1. Add a folder named **Data**.
 
-The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions.
+1. Create a new class named `RazorPagesMovieContext.cs` in the Models folder. 
+
+The database context, or `DbContext`, is a class provided by Entity Framework to facilitate database interactions. Add the following code:
 
 ``` cs
 using Microsoft.EntityFrameworkCore;
+using RazorPagesMovie.Data;
 
-namespace RazorPagesMovie.Models;
+namespace RazorPagesMovie.Data;
 
-public class MovieContext : DbContext 
+public class RazorPagesMovieContext : DbContext 
 {
-    public MovieContext(DbContextOptions<MovieContext> options) 
+    public RazorPagesMovieContext(DbContextOptions<RazorPagesMovieContext> options) 
         : base(options) 
     {
     }
@@ -79,7 +81,7 @@ The previous code creates a `DbSet`  property for the entity set. An entity set 
 
 ## Add a connection string
 
-Open the `appsettings.json` file and add the `MovieContext` connection string as shown in the following code:
+Open the `appsettings.json` file and add the `RazorPagesMovieContext` connection string as shown in the following code:
 
 ``` json
 {
@@ -91,7 +93,7 @@ Open the `appsettings.json` file and add the `MovieContext` connection string as
   },
   "AllowHosts": "*",
   "ConnectionStrings": {
-    "MovieContext": "Data Source=MvcMovie.db"
+    "RazorPagesMovieContext": "Data Source=MvcMovie.db"
   }
 }
 ```
@@ -102,14 +104,14 @@ Open the `appsettings.json` file and add the `MovieContext` connection string as
 2. Add the following using directive at the top of the file.
 
    ```cs
-   using RazorPagesMovie.Models;
+   using RazorPagesMovie.Data;
    ```
 
 3. Add the following code under `builder.Services.AddRazorPages();`:
 
     ``` cs
-    var connectionString = builder.Configuration.GetConnectionString("MovieContext");
-    builder.Services.AddSqlite<MovieContext>(connectionString);
+    var connectionString = builder.Configuration.GetConnectionString("RazorPagesMovieContext");
+    builder.Services.AddSqlite<RazorPagesMovieContext>(connectionString);
     ```
 
 ## Perform initial migration
@@ -137,7 +139,7 @@ Commands Explained
 | Command       |Description       |
 | ------------- |-------------|
 | ` add package`    | installs the tools needed |
-| `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'MovieContext.cs'. `InitialCreate` is the name of the migrations. |  
+| `ef migrations add InitialCreate`     | generates code to create the initial database schema based on the model specified in 'RazorPagesMovieContext.cs'. `InitialCreate` is the name of the migrations. |  
 |`ef database update` | creates the database      |
 
 ## Scaffold the movie model
@@ -156,7 +158,7 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 
 Run the following command:
 
-`dotnet aspnet-codegenerator razorpage -m Movie -dc MovieContext -udl -outDir Pages/Movies --referenceScriptLibraries`
+`dotnet aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries`
 
 ## Test your app
 
