@@ -27,16 +27,16 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
       
     - name: Build Step 1
-      run: dotnet build Tutorial/1-Create a Razor Page/RazorPagesMovie/RazorPagesMovie.csproj
+      run: dotnet build "Tutorial/1-Create a Razor Page/RazorPagesMovie/RazorPagesMovie.csproj"
 
     - name: Build Step 2
-      run: dotnet build Tutorial/2-Add a model/RazorPagesMovie/RazorPagesMovie.csproj
+      run: dotnet build "Tutorial/2-Add a model/RazorPagesMovie/RazorPagesMovie.csproj"
 
     - name: Build Step 3
-      run: dotnet build Tutorial/3-Update Pages/RazorPagesMovie/RazorPagesMovie.csproj
+      run: dotnet build "Tutorial/3-Update Pages/RazorPagesMovie/RazorPagesMovie.csproj"
    
     - name: Build Step 4
-      run: dotnet build Tutorial/4-Add Search/RazorPagesMovie/RazorPagesMovie.csproj
+      run: dotnet build "Tutorial/4-Add Search/RazorPagesMovie/RazorPagesMovie.csproj"
 
     - name: Build Final
-      run: dotnet build Final_Project/RazorPagesMovie/RazorPagesMovie.csproj
+      run: dotnet build "Final_Project/RazorPagesMovie/RazorPagesMovie.csproj"
