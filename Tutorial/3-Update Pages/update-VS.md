@@ -20,21 +20,20 @@ In this tutorial, you're going to learn how to update the generated pages. For e
 1. Replace the contents of the `Movie.cs` file with the following code:
 
     ```csharp
-    namespace RazorPagesMovie.Models
+    namespace RazorPagesMovie.Models;
+
+    public class Movie
     {
-        public class Movie
-        {
-            public int ID { get; set; }
-            public string? Title { get; set; }
-    
-            [Display(Name = "Release Date")]
-            [DataType(DataType.Date)]
-            public DateTime ReleaseDate { get; set; }
-            public string? Genre { get; set; }
-    
-            [Column(TypeName = "decimal(18, 2)")]
-            public decimal Price { get; set; }
-        }
+        public int ID { get; set; }
+        public string? Title { get; set; }
+
+        [Display(Name = "Release Date")]
+        [DataType(DataType.Date)]
+        public DateTime ReleaseDate { get; set; }
+        public string? Genre { get; set; }
+
+        [Column(TypeName = "decimal(18, 2)")]
+        public decimal Price { get; set; }
     }
     ```
 
