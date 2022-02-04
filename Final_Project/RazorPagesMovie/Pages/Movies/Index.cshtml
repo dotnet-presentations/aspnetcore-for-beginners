@@ -1,4 +1,4 @@
-@page
+﻿@page
 @model RazorPagesMovie.Pages.Movies.IndexModel
 
 @{
@@ -15,9 +15,9 @@
         <select asp-for="MovieGenre" asp-items="Model.Genres">
             <option value="">All</option>
         </select>
-
-        Movie Title: <input type="text" name="SearchString" />
-        <input type="submit" value="Filter"/>
+            
+        Movie Title: <input type="text" name="SearchString">
+            <input type="submit" value="Filter"/>
     </p>
 </form>
 <table class="table">

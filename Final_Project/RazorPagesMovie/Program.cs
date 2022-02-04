@@ -1,12 +1,13 @@
-using RazorPagesMovie.Models;
-
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using RazorPagesMovie.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var connectionString = builder.Configuration.GetConnectionString("MovieContext");
-builder.Services.AddSqlite<MovieContext>(connectionString);
+builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext")));
 
 var app = builder.Build();
 
