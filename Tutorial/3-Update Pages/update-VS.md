@@ -6,7 +6,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 * [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio Installer, install the following workload:
-    * ASP.NET and web development
+  * ASP.NET and web development
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage-VS.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel-VS.md)
 
@@ -14,7 +14,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ![](images/CurrentPage.PNG)
 
-In this tutorial, you are going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
+In this tutorial, you're going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
 
 1. Open the `Models/Movie.cs` file.
 1. Replace the contents of the `Movie.cs` file with the following code:

@@ -1,6 +1,8 @@
+# Add search to a Razor page using Visual Studio for Mac
+
 The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
 
-### Prerequisites
+## Prerequisites
 
 * [Visual Studio 2022 for Mac Preview](https://visualstudio.microsoft.com/vs/mac/preview/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio for Mac Installer, install the .NET Core target.
@@ -10,7 +12,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ## Adding Search to a page
 
-In this tutorial, you are going to add search to the Index Page. By the end of this tutorial, you can search by genre and name.
+In this tutorial, you're going to add search to the Index Page. By the end of this tutorial, you can search by genre and name.
 
 #### Open Pages/Movies/Index.cshtml.cs and replace OnGetAsync with the following:
 
@@ -32,7 +34,7 @@ public async Task OnGetAsync(string searchString)
 ### Test search string
 
 * Run your application again with F5 and navigate back to the Movies Page
-* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:{port}/Movies?searchString=avengers`)
+* Append the query string to the end `?searchString=[Film Title]` (for example: `http://localhost:{port}/Movies?searchString=panther`)
 
 ![](images/searchString.PNG)
 
@@ -66,7 +68,7 @@ public async Task OnGetAsync(string searchString)
 
 ### Add the code below to Pages/Movies/Index.cshtml.cs
 
-*Note: you will need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
+*Note: you need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
 
 ```csharp
 public class IndexModel : PageModel
@@ -118,7 +120,7 @@ public async Task OnGetAsync(string movieGenre,string searchString)
             <option value="">All</option>
         </select>
         
-        Movie Title:<input type="text" name="SearchString">
+        Movie Title: <input type="text" name="SearchString">
          <input type="submit" value="Filter"/>
     </p>
 </form>
@@ -133,4 +135,4 @@ Mission Accomplished
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-You've have built your first Razor Page application with C# and ASP.NET Core!
+You've built your first Razor Page application with C# and ASP.NET Core!

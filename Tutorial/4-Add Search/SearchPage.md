@@ -1,21 +1,22 @@
+# Add search to a Razor page using Visual Studio Code
+
 The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages in Visual Studio Code"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages-vsc/razor-pages-start) from docs.microsoft.com.
 
-### Prerequisites
+## Prerequisites
 
 * [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-*  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
 * Tutorial 3- [Update Page](../3-Update%20Pages/update.md)
 
 ## Adding Search to a page
 
-In this tutorial, you are going to add search to the Index Page. By the end of this tutorial, you can search by genre and name.
+In this tutorial, you're going to add search to the Index Page. By the end of this tutorial, you'll be able to search by genre and name.
 
-### Update the Index page's `OnGetAsync` method
+## Update the Index page's `OnGetAsync` method
 
-
-#### Edit the Movies/Index.cshtml.cs
+### Edit the Movies/Index.cshtml.cs
 
 ``` cs
 public async Task OnGetAsync(string searchString)
@@ -34,8 +35,8 @@ public async Task OnGetAsync(string searchString)
 
 ### Test search string
 
-- Run your application 
-- Append the query string to the end `?searchString=avengers`
+* Run your application.
+* Append the query string to the end `?searchString=panther`
 
 ![](images/searchString.PNG)
 
@@ -43,24 +44,24 @@ public async Task OnGetAsync(string searchString)
 
 **Search by Title**
 
-#### Open the Index.cshtml file and add the`<form>`
+1. Open the `Index.cshtml` file and add the `<form>` element as shown in the following code:
 
-```
-<h2>Index</h2>
-
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<form>
+    ```html
+    <h2>Index</h2>
+    
     <p>
-        Movie Title:<input type="text" name="SearchString">
-         <input type="submit" value="Filter"/>
+        <a asp-page="Create">Create New</a>
     </p>
-</form>
-```
+    <form>
+        <p>
+            Movie Title: <input type="text" name="SearchString">
+             <input type="submit" value="Filter"/>
+        </p>
+    </form>
+    ```
 
-- Run the application with `dotnet run` and then go to `http://localhost:{port}/movies`
-- Enter a film title
+1. Run the application with `dotnet run` and then go to `http://localhost:{port}/movies`
+1. Enter a film title.
 
 ![](images/form.PNG)
 
@@ -68,7 +69,7 @@ public async Task OnGetAsync(string searchString)
 
 ### Add the code below to Pages/Movies/Index.cshtml.cs
 
-*Note you will need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
+*Note you need to add `using Microsoft.AspNetCore.Mvc.Rendering;`*
 
 ``` cs
 public class IndexModel : PageModel
@@ -120,7 +121,7 @@ public async Task OnGetAsync(string movieGenre,string searchString)
             <option value="">All</option>
         </select>
         
-        Movie Title:<input type="text" name="SearchString">
+        Movie Title: <input type="text" name="SearchString">
          <input type="submit" value="Filter"/>
     </p>
 </form>
@@ -134,4 +135,4 @@ Mission Accomplished
 
 ![](https://media.giphy.com/media/3o6UBbrfvYwldawfDi/giphy.gif)
 
-You've have built your first Razor Page application!
+You've built your first Razor Page application!

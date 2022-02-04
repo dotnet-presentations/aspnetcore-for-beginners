@@ -5,7 +5,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 ## Prerequisites
 
 * [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0) 
-*  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
 
@@ -13,7 +13,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 ![](images/CurrentPage.PNG)
 
-In this tutorial, you are going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
+In this tutorial, you're going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
 
 * Open Models/Movie.cs
 * Add this using statement: `using System.ComponentModel.DataAnnotations;` and `using System.ComponentModel.DataAnnotations.Schema;`
@@ -40,7 +40,9 @@ public class Movie
     public decimal Price { get; set; }
 }
 ```
-- run the app to see the update `dotnet run`
+
+* Run the app to see the updated page using the `dotnet run` command.
+
 ![](images/NewPage.PNG)
 
 **NEXT TUTORIAL** :[Adding search](../4-Add%20Search/SearchPage.md)

@@ -10,7 +10,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
   
 ## Add a data model
 
-In this section, you are adding classes to manage movies in a database.
+In this section, you're adding classes to manage movies in a database.
 
 1. Add a folder named Models.
 1. Add a class to the `Models` folder named `Movie.cs`.
@@ -31,10 +31,10 @@ In this section, you are adding classes to manage movies in a database.
         public decimal Price { get; set; }
     }
     ```
-    
+
 ## Add Entity Framework NuGet Packages
 
-In the command line, run the following commands (You can open a new Terminal in VS Code via `Terminal -> New Terminal` :
+In the command line, run the following commands (you can open a new Terminal in VS Code via **Terminal** > **New Terminal**) :
 
  ```console
 dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design

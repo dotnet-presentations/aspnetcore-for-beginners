@@ -13,7 +13,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ![](images/CurrentPage.PNG)
 
-In this tutorial, you are going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
+In this tutorial, you're going to learn how to update the generated pages. For example, suppose you want to remove the time from the release date.
 
 * Open Models/Movie.cs
 

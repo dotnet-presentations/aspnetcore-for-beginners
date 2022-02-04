@@ -36,7 +36,7 @@ Visual Studio creates a starter project.
 
 ![](images/install-ssl-certificate.png)
 
-The following shows the site running with the default template:
+The following image shows the site running with the default template:
 
 ![](images/razor-page.png)
 

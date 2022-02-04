@@ -12,7 +12,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ## Add a data model
 
-In this section, you are adding classes to manage movies in a database.
+In this section, you're adding classes to manage movies in a database.
 
 1. In **Solution Explorer**, right-click the RazorPagesMovie project. Select **Add** > **New Folder**. Name the folder `Models`.
 1. Right click the `Models` folder. Select **Add** > **Class**. Name the class `Movie`.

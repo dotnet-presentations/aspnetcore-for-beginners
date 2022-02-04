@@ -35,7 +35,7 @@ In this section, you'll be adding classes to manage movies in a database.
 
 ## Add NuGet Sqlite and Entity Framework Core
 
-Now, let's add NuGet package for the Sqlite provider for Entity Framework Core that will enable you to have a database for your web app.
+Now, let's add NuGet package for the Sqlite provider for Entity Framework Core, which will enable you to have a database for your web app.
 
 1. In **Solution Pad**, right-click the RazorPagesMovie project and select **Manage NuGet Packages**.
 
@@ -46,7 +46,7 @@ Now, let's add NuGet package for the Sqlite provider for Entity Framework Core t
 
     ![](images/add-package-vsmac.png)
 
-Repeat this to add the following packages:
+Repeat these steps to add the following packages:
 
 * `Microsoft.EntityFrameworkCore.Design`
 * `Microsoft.EntityFrameworkCore.SqlServer`
