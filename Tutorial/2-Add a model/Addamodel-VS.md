@@ -19,16 +19,15 @@ In this section, you're adding classes to manage movies in a database.
 1. Replace the contents of the `Movie.cs` file with the following code:
 
     ```csharp
-    namespace RazorPagesMovie.Models
+    namespace RazorPagesMovie.Models;
+    
+    public class Movie
     {
-        public class Movie
-        {
-            public int ID { get; set; }
-            public string? Title { get; set; }
-            public DateTime ReleaseDate { get; set; }
-            public string? Genre { get; set; }
-            public decimal Price { get; set; }
-        }
+        public int ID { get; set; }
+        public string? Title { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public string? Genre { get; set; }
+        public decimal Price { get; set; }
     }
     ```
 
@@ -66,6 +65,47 @@ The scaffold process also modifies some existing files:
 
 * Startup.cs: Created a DB context and registered it with the dependency injection container.
 * appsettings.json: The connection string used to connect to a local database is added.
+
+## Use SQLite as the Database
+
+When we scaffolded the database, SqlServer was selected as the default and is a great option for developer ASP.NET Core applications that need a database. For this application let's switch the database use SQLite, small, fast, self-contained, high-reliability, full-featured, SQL database engine. This is easy to do in just a few step:
+
+1. From the **Tools** menu, select **NuGet Package Manager** > **Package Manager Console**.
+
+1. Run the following command:
+
+```cli
+Install-Package Microsoft.EntityFrameworkCore.Sqlite
+```
+
+1. Update the connection string found in the `appsettings.json`: Change
+
+```json
+"ConnectionStrings": {
+    "RazorPagesMovieContext": "Server=(localdb)\\mssqllocaldb;Database=RazorPagesMovieContext-5fff187f-3f2c-4d38-9b74-1812d4621ed3;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+```
+
+to the following:
+
+```json
+  "ConnectionStrings": {
+    "RazorPagesMovieContext": "Data Source=MvcMovie.db"
+  }
+```
+
+1. Update the `AddDbContext` registration in the `Program.cs` from:
+
+```csharp
+builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext")));
+```
+
+to the following:
+```
+    var connectionString = builder.Configuration.GetConnectionString("RazorPagesMovieContext");
+    builder.Services.AddSqlite<RazorPagesMovieContext>(connectionString);
+```
 
 ## Perform initial migration
 
