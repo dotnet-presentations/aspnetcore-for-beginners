@@ -51,5 +51,6 @@ In this tutorial, you're going to learn how to update the generated pages. For e
 1. Navigate to `https://localhost:{port}/Movies/Create` and notice the changes.
 
     ![](images/NewPage.PNG)
+   
 
 **NEXT TUTORIAL:** [Adding search](../4-Add%20Search/SearchPage-VS.md)

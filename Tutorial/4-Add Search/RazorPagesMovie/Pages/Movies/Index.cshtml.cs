@@ -21,7 +21,7 @@ namespace RazorPagesMovie.Pages.Movies
             _context = context;
         }
 
-        public IList<Movie> Movie { get;set; }
+        public IList<Movie> Movie;
         public SelectList Genres;
         public string MovieGenre { get; set; }
 
