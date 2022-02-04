@@ -1,30 +1,33 @@
- # ASP.NET Core for Beginners - Workshop
+# ASP.NET Core for Beginners - Workshop
+
 This is a half day workshop for developers who are completely new to .NET Core and ASP.NET.
 
+[![build](https://github.com/dotnet-presentations/aspnetcore-for-beginners/actions/workflows/build-validation.yml/badge.svg)](https://github.com/dotnet-presentations/aspnetcore-for-beginners/actions/workflows/build-validation.yml)
 ## Setup
 
 ### VS Code
 
-Install the Following:
-* [.NET Core SDK](https://www.microsoft.com/net/download/) 
-*  [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+Install the following:
+
+* [.NET SDK](https://dotnet.microsoft.com/download)
+* [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 
 ### Visual Studio
 
-*  [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
-* In the Visual Studio Installer, install the following workloads:
-    * ASP.NET and web development
-    * .NET Core cross-platform development
+* [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* In the Visual Studio Installer, install the following workload:
+  * ASP.NET and web development
 
 ### Visual Studio for Mac
 
-* [Visual Studio 2019 for Mac](https://visualstudio.microsoft.com/downloads/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [Visual Studio 2022 for Mac Preview](https://visualstudio.microsoft.com/vs/mac/preview/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio for Mac Installer, install the .NET Core target.
 
-### What you'll be building
-In this tutorial you will learn the basics of building a simple ASP.NET Core Razor Pages web app.
+### What you'll build
 
-## Tutorial Breakdown
+In this tutorial, you'll learn the basics of building a simple ASP.NET Core Razor Pages web app.
+
+## Tutorial breakdown
 
 | VS Code Tutorial | Visual Studio Tutorial | Visual Studio for Mac Tutorial| Topics |
 | ----- | ---- | ---- | ---- |
