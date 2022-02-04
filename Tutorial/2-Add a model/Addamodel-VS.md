@@ -33,7 +33,7 @@ In this section, you're adding classes to manage movies in a database.
 
 ## Scaffold the movie model
 
-1. In **Solution Explorer**, right click on the Pages folder. Select **Add** > **New Folder**.
+1. In **Solution Explorer**, right click on the **Pages** folder. Select **Add** > **New Folder**.
 1. Name the folder `Movies`.
 1. In **Solution Explorer**, right click on the `Pages/Movies` folder. Select **Add** > **New Scaffolded Item**.
   
@@ -102,7 +102,8 @@ builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
 ```
 
 to the following:
-```
+
+```csharp
     var connectionString = builder.Configuration.GetConnectionString("RazorPagesMovieContext");
     builder.Services.AddSqlite<RazorPagesMovieContext>(connectionString);
 ```
