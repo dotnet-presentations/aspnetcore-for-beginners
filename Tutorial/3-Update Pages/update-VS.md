@@ -49,5 +49,6 @@ In this tutorial, you're going to learn how to update the generated pages. For e
 1. Press F5 to run the app and see the changes.
 
     ![](images/NewPage.PNG)
+   
 
 **NEXT TUTORIAL** - [Adding search](../4-Add%20Search/SearchPage-VS.md)
