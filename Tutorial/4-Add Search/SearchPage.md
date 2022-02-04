@@ -53,7 +53,7 @@ public async Task OnGetAsync(string searchString)
     <form>
         <p>
             Movie Title: <input type="text" name="SearchString">
-             <input type="submit" value="Filter"/>
+            <input type="submit" value="Filter"/>
         </p>
     </form>
     ```
@@ -119,7 +119,7 @@ public async Task OnGetAsync(string searchString)
             </select>
             
             Movie Title: <input type="text" name="SearchString">
-             <input type="submit" value="Filter"/>
+            <input type="submit" value="Filter"/>
         </p>
     </form>
     ```
