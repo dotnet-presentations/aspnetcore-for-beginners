@@ -1,39 +1,36 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿#nullable disable
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages.Movies
+namespace RazorPagesMovie.Pages.Movies;
+
+public class DetailsModel : PageModel
 {
-    public class DetailsModel : PageModel
+    private readonly RazorPagesMovieContext _context;
+
+    public DetailsModel(RazorPagesMovieContext context)
     {
-        private readonly RazorPagesMovie.Models.MovieContext _context;
+        _context = context;
+    }
 
-        public DetailsModel(RazorPagesMovie.Models.MovieContext context)
+    public Movie Movie { get; set; }
+
+    public async Task<IActionResult> OnGetAsync(int? id)
+    {
+        if (id == null)
         {
-            _context = context;
+            return NotFound();
         }
 
-        public Movie Movie { get; set; }
+        Movie = await _context.Movie.FirstOrDefaultAsync(m => m.ID == id);
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        if (Movie == null)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Movie = await _context.Movie.SingleOrDefaultAsync(m => m.ID == id);
-
-            if (Movie == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            return NotFound();
         }
+        return Page();
     }
 }
