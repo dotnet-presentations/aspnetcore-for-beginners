@@ -1,4 +1,4 @@
-# Add search to a Razor page using Visual Studio
+# Add search to a Razor page using Visual Studio changes for PR
 
 The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Core"*](https://docs.microsoft.com/aspnet/core/tutorials/razor-pages/razor-pages-start) from docs.microsoft.com.
 
