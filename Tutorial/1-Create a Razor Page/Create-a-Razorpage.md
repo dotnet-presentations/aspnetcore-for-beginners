@@ -4,7 +4,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 ## Prerequisites
 
-* [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+* [.NET 7 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 * [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * [C# Extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
@@ -13,7 +13,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 Enter the following commands in the terminal:
 
  ```console
-dotnet new razor -o RazorPagesMovie -f net6.0
+dotnet new razor -o RazorPagesMovie -f net7.0
 cd RazorPagesMovie
 dotnet run
 ```

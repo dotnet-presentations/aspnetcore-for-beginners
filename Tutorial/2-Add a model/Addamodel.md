@@ -4,7 +4,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 ## Prerequisites
 
-* [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+* [.NET 7 SDK](https://dotnet.microsoft.com/download/dotnet/7.0)
 * [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
   
@@ -102,8 +102,8 @@ Open the `appsettings.json` file and add the `RazorPagesMovieContext` connection
 3. Add the following code under `builder.Services.AddRazorPages();`:
 
     ``` cs
-    var connectionString = builder.Configuration.GetConnectionString("RazorPagesMovieContext");
-    builder.Services.AddSqlite<RazorPagesMovieContext>(connectionString);
+    builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
     ```
 
 ## Perform initial migration
