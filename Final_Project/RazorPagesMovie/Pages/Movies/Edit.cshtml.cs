@@ -1,72 +1,77 @@
-﻿#nullable disable
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages.Movies;
-
-public class EditModel : PageModel
+namespace RazorPagesMovie.Pages.Movies
 {
-    private readonly RazorPagesMovieContext _context;
-
-    public EditModel(RazorPagesMovieContext context)
+    public class EditModel : PageModel
     {
-        _context = context;
-    }
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
 
-    [BindProperty]
-    public Movie Movie { get; set; }
-
-    public async Task<IActionResult> OnGetAsync(int? id)
-    {
-        if (id == null)
+        public EditModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
         {
-            return NotFound();
+            _context = context;
         }
 
-        Movie = await _context.Movie.FirstOrDefaultAsync(m => m.ID == id);
+        [BindProperty]
+        public Movie Movie { get; set; } = default!;
 
-        if (Movie == null)
+        public async Task<IActionResult> OnGetAsync(int? id)
         {
-            return NotFound();
-        }
-        return Page();
-    }
-
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see https://aka.ms/RazorPagesCRUD.
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
-        {
-            return Page();
-        }
-
-        _context.Attach(Movie).State = EntityState.Modified;
-
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!MovieExists(Movie.ID))
+            if (id == null || _context.Movie == null)
             {
                 return NotFound();
             }
-            else
+
+            var movie =  await _context.Movie.FirstOrDefaultAsync(m => m.ID == id);
+            if (movie == null)
             {
-                throw;
+                return NotFound();
             }
+            Movie = movie;
+            return Page();
         }
 
-        return RedirectToPage("./Index");
-    }
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see https://aka.ms/RazorPagesCRUD.
+        public async Task<IActionResult> OnPostAsync()
+        {
+            if (!ModelState.IsValid)
+            {
+                return Page();
+            }
 
-    private bool MovieExists(int id)
-    {
-        return _context.Movie.Any(e => e.ID == id);
+            _context.Attach(Movie).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!MovieExists(Movie.ID))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return RedirectToPage("./Index");
+        }
+
+        private bool MovieExists(int id)
+        {
+          return (_context.Movie?.Any(e => e.ID == id)).GetValueOrDefault();
+        }
     }
 }

@@ -1,17 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace RazorPagesMovie.Pages;
-
-public class PrivacyModel : PageModel
+namespace RazorPagesMovie.Pages
 {
-    private readonly ILogger<PrivacyModel> _logger;
-
-    public PrivacyModel(ILogger<PrivacyModel> logger)
+    public class PrivacyModel : PageModel
     {
-        _logger = logger;
-    }
+        private readonly ILogger<PrivacyModel> _logger;
 
-    public void OnGet()
-    {
+        public PrivacyModel(ILogger<PrivacyModel> logger)
+        {
+            _logger = logger;
+        }
+
+        public void OnGet()
+        {
+        }
     }
 }

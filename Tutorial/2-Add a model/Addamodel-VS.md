@@ -98,14 +98,14 @@ to the following:
 
 ```csharp
 builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 ```
 
 to the following:
 
 ```csharp
-    var connectionString = builder.Configuration.GetConnectionString("RazorPagesMovieContext");
-    builder.Services.AddSqlite<RazorPagesMovieContext>(connectionString);
+builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 ```
 
 ## Perform initial migration

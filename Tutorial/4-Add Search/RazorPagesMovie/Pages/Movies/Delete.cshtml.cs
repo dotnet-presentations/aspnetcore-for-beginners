@@ -1,5 +1,4 @@
-﻿#nullable disable
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -21,35 +20,39 @@ namespace RazorPagesMovie.Pages.Movies
         }
 
         [BindProperty]
-        public Movie Movie { get; set; }
+      public Movie Movie { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(int? id)
         {
-            if (id == null)
+            if (id == null || _context.Movie == null)
             {
                 return NotFound();
             }
 
-            Movie = await _context.Movie.FirstOrDefaultAsync(m => m.ID == id);
+            var movie = await _context.Movie.FirstOrDefaultAsync(m => m.ID == id);
 
-            if (Movie == null)
+            if (movie == null)
             {
                 return NotFound();
+            }
+            else 
+            {
+                Movie = movie;
             }
             return Page();
         }
 
         public async Task<IActionResult> OnPostAsync(int? id)
         {
-            if (id == null)
+            if (id == null || _context.Movie == null)
             {
                 return NotFound();
             }
+            var movie = await _context.Movie.FindAsync(id);
 
-            Movie = await _context.Movie.FindAsync(id);
-
-            if (Movie != null)
+            if (movie != null)
             {
+                Movie = movie;
                 _context.Movie.Remove(Movie);
                 await _context.SaveChangesAsync();
             }

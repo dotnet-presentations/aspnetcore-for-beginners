@@ -37,16 +37,6 @@ In this tutorial, you're going to learn how to update the generated pages. For e
     }
     ```
 
-1. Right click on a red line and select **Quick Actions and Refactorings** on the [Display] attribute.
-
-    ![](images/refactor_VS.png)
-
-1. Select **using System.ComponentModel.DataAnnotations;**.
-
-    ![](images/using_annotations_VS.png)
-
-1. Right click on the remaining red line and select **Quick Actions and Refactorings** on the [Column] attribute.
-1. Select **using System.ComponentModel.DataAnnotations.Schema;**.
 1. Press F5 to run the app.
 1. Navigate to `https://localhost:{port}/Movies/Create` and notice the changes.
 

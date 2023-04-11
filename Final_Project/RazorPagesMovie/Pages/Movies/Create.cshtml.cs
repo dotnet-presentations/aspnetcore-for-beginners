@@ -1,39 +1,45 @@
-﻿#nullable disable
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using RazorPagesMovie.Data;
 using RazorPagesMovie.Models;
 
-namespace RazorPagesMovie.Pages.Movies;
-
-public class CreateModel : PageModel
+namespace RazorPagesMovie.Pages.Movies
 {
-    private readonly RazorPagesMovieContext _context;
-
-    public CreateModel(RazorPagesMovieContext context)
+    public class CreateModel : PageModel
     {
-        _context = context;
-    }
+        private readonly RazorPagesMovie.Data.RazorPagesMovieContext _context;
 
-    public IActionResult OnGet()
-    {
-        return Page();
-    }
+        public CreateModel(RazorPagesMovie.Data.RazorPagesMovieContext context)
+        {
+            _context = context;
+        }
 
-    [BindProperty]
-    public Movie Movie { get; set; }
-
-    // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
-    public async Task<IActionResult> OnPostAsync()
-    {
-        if (!ModelState.IsValid)
+        public IActionResult OnGet()
         {
             return Page();
         }
 
-        _context.Movie.Add(Movie);
-        await _context.SaveChangesAsync();
+        [BindProperty]
+        public Movie Movie { get; set; } = default!;
+        
 
-        return RedirectToPage("./Index");
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
+        {
+          if (!ModelState.IsValid || _context.Movie == null || Movie == null)
+            {
+                return Page();
+            }
+
+            _context.Movie.Add(Movie);
+            await _context.SaveChangesAsync();
+
+            return RedirectToPage("./Index");
+        }
     }
 }

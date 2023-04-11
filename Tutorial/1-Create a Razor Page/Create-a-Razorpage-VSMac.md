@@ -4,7 +4,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ## Prerequisites
 
-* [Visual Studio 2022 for Mac Preview](https://visualstudio.microsoft.com/vs/mac/preview/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
+* [Visual Studio 2022 for Mac](https://visualstudio.microsoft.com/vs/mac/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * In the Visual Studio for Mac Installer, install the .NET Core target.
 
 ## Create a Razor web app
@@ -14,7 +14,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ![](images/newproject-vsmac.png)
 
-* Select .NET 6.0 in the dropdown, and keep the other defaults.
+* Select .NET 7.0 in the dropdown, and keep the other defaults.
 
 ![](images/createwebapp-vsmac.png)
 

@@ -45,7 +45,7 @@ public async Task OnGetAsync(string searchString)
 1. Open the `Pages/Movies/Index.cshtml` file and add the `<form>` element as shown in the following code:
 
     ```html
-    <h2>Index</h2>
+    <h1>Index</h1>
     
     <p>
         <a asp-page="Create">Create New</a>
@@ -78,12 +78,12 @@ public async Task OnGetAsync(string searchString)
             _context = context;
         }
     
-        public IList<Movie> Movie;
+        public IList<Movie> Movie { get;set; } = default!;
         public SelectList Genres;
         public string MovieGenre { get; set; }
     ```
 
-1. Add `using Microsoft.AspNetCore.Mvc.Rendering;` to the top of the class.
+
 
 1. Update the `OnGetAsync` method on that same file:
 

@@ -4,7 +4,7 @@ The following tutorial is based on [*"Get started with ASP.NET Core Razor Pages 
 
 ## Prerequisites
 
-* [.NET 6 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
+* [.NET 7 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 * [Visual Studio Code](https://code.visualstudio.com/?wt.mc_id=adw-brand&gclid=Cj0KCQjwqYfWBRDPARIsABjQRYwLe3b9dJMixA98s8nS8QfuNBKGsiRVRXzB93fe4E27LGK5KLrGcnYaAgdREALw_wcB)
 * Tutorial 1- [Create a Razor Page application](../1-Create%20a%20Razor%20Page/Create-a-Razorpage.md)
 * Tutorial 2- [Add a Model](../2-Add%20a%20model/Addamodel.md)
@@ -45,7 +45,7 @@ public async Task OnGetAsync(string searchString)
 1. Open the `Index.cshtml` file and add the `<form>` element as shown in the following code:
 
     ```html
-    <h2>Index</h2>
+    <h1>Index</h1>
     
     <p>
         <a asp-page="Create">Create New</a>
@@ -77,12 +77,11 @@ public async Task OnGetAsync(string searchString)
             _context = context;
         }
     
-        public IList<Movie> Movie;
+        public IList<Movie> Movie { get;set; } = default!;
         public SelectList Genres;
         public string MovieGenre { get; set; }
     ```
 
-1. Add `using Microsoft.AspNetCore.Mvc.Rendering;` to the top of the class.
 1. Update the `OnGetAsync` method on that same file:
 
     ``` cs

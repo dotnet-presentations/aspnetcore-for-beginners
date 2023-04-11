@@ -22,7 +22,7 @@ The following tutorial is based on [*"Get started with Razor Pages in ASP.NET Co
 
 ![](images/configureproject.png)
 
-* Select **.NET 6.0 (Long-term support)** in the dropdown, and then select **Create**.
+* Select **.NET 7.0 (Long-term support)** in the dropdown, and then select **Create**.
 
 ![](images/createwebapp.png)
 
